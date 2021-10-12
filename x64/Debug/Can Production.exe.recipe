@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\github\Can-Production\x64\Debug\Can Production.exe</FullPath>
+      <FullPath>D:\Can-Production\x64\Debug\Can Production.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

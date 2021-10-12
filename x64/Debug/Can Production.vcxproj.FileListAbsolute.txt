@@ -1,1 +1,3 @@
 D:\github\Can-Production\x64\Debug\Can Production.exe
+D:\Can-Production\x64\Debug\Can Production.exe
+D:\Can-Production\x64\Debug\Can Production.pdb

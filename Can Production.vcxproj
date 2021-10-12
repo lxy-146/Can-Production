@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="canfactory.h" />
     <ClInclude Include="header.h" />
+    <ClInclude Include="prototype.h" />
     <ClInclude Include="stapleorder.h" />
     <ClInclude Include="staple.h" />
     <ClInclude Include="stapleobserve.h" />
