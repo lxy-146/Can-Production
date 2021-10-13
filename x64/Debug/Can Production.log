@@ -1,2 +1,5 @@
-﻿  main.cpp
-  Can Production.vcxproj -> D:\Can-Production\x64\Debug\Can Production.exe
+﻿  canfactory.cpp
+  main.cpp
+  storehouse.cpp
+  正在生成代码...
+  Can Production.vcxproj -> D:\github\设计模式\Can-Production\x64\Debug\Can Production.exe

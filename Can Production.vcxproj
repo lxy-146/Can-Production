@@ -146,6 +146,7 @@
     <ClInclude Include="staple.h" />
     <ClInclude Include="stapleobserve.h" />
     <ClInclude Include="storehouse.h" />
+    <ClInclude Include="decoration.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="canfactory.cpp" />
