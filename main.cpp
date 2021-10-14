@@ -6,12 +6,13 @@
 #include"decoration.h"
 
 int main() {
-	OrderSubject* ordersubject=new OrderSubject();
-	Observe* fruitobserve = new FruitObserve();
-	Observe* meatobserve = new MeatObserve();
-	ordersubject->Attach(fruitobserve);
-	ordersubject->Attach(meatobserve);
-	ordersubject->SetOrder(10, 100);
+	OrderSubject* ordersubject=new OrderSubject();//创建一个与observe有关的subject类用来对observe进行控制
+	Observe* fruitobserve = new FruitObserve();//水果方面的observe，与subject进行连接
+	Observe* meatobserve = new MeatObserve();//肉方面的observe，与subject进行连接
+	ordersubject->Attach(fruitobserve);//将水果observe进行连接
+	ordersubject->Attach(meatobserve);//将肉observe进行连接
+	ordersubject->SetOrder(10, 100);//创建一个订单
+	ordersubject->SetOrder(100, 10);
 
 	Can* veg_can = new Veg_Can();//实例化一个蔬菜罐头
 	Can* meat_can = new Meat_Can();//实例化一个肉罐头
