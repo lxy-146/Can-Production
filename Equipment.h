@@ -55,6 +55,12 @@ public:
 
 class Equipment {
 public:
+
+    void specificRequest()
+    {
+        std::cout << "Equipment Handles the problem through the adapter" << std::endl;
+    }
+
     void start() {
         m_host.start();
         m_display.start();
