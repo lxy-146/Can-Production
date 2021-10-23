@@ -1,2 +1,3 @@
-﻿  main.cpp
-  Can Production.vcxproj -> D:\github\Can-Production\x64\Debug\Can Production.exe
+﻿  can.cpp
+D:\github\设计模式\Can-Production\can.cpp(14,13): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+  Can Production.vcxproj -> D:\github\设计模式\Can-Production\x64\Debug\Can Production.exe

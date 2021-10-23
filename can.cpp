@@ -2,7 +2,7 @@
 #include"can.h"
 
 void MeatCan::show() {
-	cout << "this is a meat can!" << endl;
+	cout << "this is a meat can!";
 }
 
 void Can::setprice(int p) {
@@ -23,5 +23,5 @@ int Can::getprotime() {
 }
 
 void FruitCan::show() {
-	cout << "this is a fruit can!" << endl;
+	cout << "this is a fruit can!";
 }

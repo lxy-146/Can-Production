@@ -2,33 +2,7 @@
 #define DECORATION_H
 
 #include "header.h"
-
-//罐头类
-class Can {
-public:
-	void virtual show();//声明为虚函数
-};
-void Can::show() {
-	cout << "这是一个罐头....";
-}
-
-//蔬菜罐头
-class Veg_Can :public Can {
-public:
-	void show();
-};
-void Veg_Can::show() {
-	cout << "这是一个蔬菜罐头";
-}
-
-//肉罐头
-class Meat_Can :public Can {
-public:
-	void show();
-};
-void Meat_Can::show() {
-	cout << "这是一个肉类罐头";
-}
+#include "can.h"
 
 //罐头分装接口
 class Can_pack :public Can {

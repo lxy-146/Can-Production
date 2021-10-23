@@ -6,6 +6,7 @@
 #include"decoration.h"
 #include"factory.h"
 #include"command.h"
+#include"can.h"
 
 int main() {
 	OrderSubject* ordersubject=new OrderSubject();//创建一个与observe有关的subject类用来对observe进行控制
@@ -32,13 +33,14 @@ int main() {
 	broker.takeorder(new PMakeOrder(packedge));
 	broker.placeorder();
 
-	Can* veg_can = new Veg_Can();//实例化一个蔬菜罐头
-	Can* meat_can = new Meat_Can();//实例化一个肉罐头
+	//装饰者模式
+	Can* fruit_can = new FruitCan();//实例化一个蔬菜罐头
+	Can* meat_can = new MeatCan();//实例化一个肉罐头
 
-	Small_Can small_veg_can = Small_Can(veg_can);//生产小型蔬菜罐头
-	Big_Can big_veg_can = Big_Can(veg_can);//生产大型蔬菜罐头
-	small_veg_can.show();
-	big_veg_can.show();
+	Small_Can small_fruit_can = Small_Can(fruit_can);//生产小型蔬菜罐头
+	Big_Can big_fruit_can = Big_Can(fruit_can);//生产大型蔬菜罐头
+	small_fruit_can.show();
+	big_fruit_can.show();
 
 	Small_Can small_meat_can = Small_Can(meat_can);//生产小型蔬菜罐头
 	Big_Can big_meat_can = Big_Can(meat_can);//生产大型蔬菜罐头

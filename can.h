@@ -1,5 +1,6 @@
 #pragma once
-class Can {
+class Can //罐头类
+{
 public:
 	Can() { price = 0; produce_time = 0; }
 	Can(int p,int pt):price(p), produce_time(pt) {}
@@ -13,11 +14,13 @@ protected:
 	int produce_time;
 };
 
+//肉罐头
 class MeatCan :public Can {
 public:
 	virtual void show();
 };
 
+//蔬菜罐头
 class FruitCan :public Can {
 public:
 	virtual void show();
