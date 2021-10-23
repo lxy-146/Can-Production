@@ -39,6 +39,15 @@
     <ClInclude Include="decoration.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="can.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="factory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +57,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="canfactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="can.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="factory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="order.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

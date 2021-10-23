@@ -38,5 +38,12 @@ private:
 	static MeatStore* meatstore;
 };
 
+class CanStore :public Storehouse {
+public:
+
+private:
+	int fruitcannum;
+	int meatcannum;
+};
 #endif
 #pragma once

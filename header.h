@@ -6,6 +6,8 @@ using namespace std;
 #include<windows.h>
 #include<list>
 #include<assert.h>
+#include<string>
+#include<typeinfo>
 
 #endif
 #pragma once

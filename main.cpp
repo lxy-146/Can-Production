@@ -4,6 +4,8 @@
 #include"stapleobserve.h"
 #include"prototype.h"
 #include"decoration.h"
+#include"factory.h"
+#include"command.h"
 
 int main() {
 	OrderSubject* ordersubject=new OrderSubject();//创建一个与observe有关的subject类用来对observe进行控制
@@ -13,6 +15,22 @@ int main() {
 	ordersubject->Attach(meatobserve);//将肉observe进行连接
 	ordersubject->SetOrder(10, 100);//创建一个订单
 	ordersubject->SetOrder(100, 10);
+
+	FactoryProducer facproducer;//抽象工厂模式，用来生产工厂的类
+	AbstractFactory* kindfactory = facproducer.getFactory("kind");//生产种类工厂
+	AbstractFactory* packedgefactory = facproducer.getFactory("packedge");//生产包装工厂
+	Kind* kind = kindfactory->getKind("fruit");//工厂模式，生产水果类
+	Packedge* packedge = packedgefactory->getPackedge("big");//生产大包装
+	Broker broker;//命令模式，命令总控器
+	broker.takeorder(new KMakeOrder(kind));//添加生产相关指令
+	broker.takeorder(new PMakeOrder(packedge));//同上
+	broker.placeorder();//执行所有命令
+	broker.clear();//清除所有命令
+	kind = kindfactory->getKind("meat");//以下为重复
+	packedge = packedgefactory->getPackedge("little");
+	broker.takeorder(new KMakeOrder(kind));
+	broker.takeorder(new PMakeOrder(packedge));
+	broker.placeorder();
 
 	Can* veg_can = new Veg_Can();//实例化一个蔬菜罐头
 	Can* meat_can = new Meat_Can();//实例化一个肉罐头

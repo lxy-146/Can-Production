@@ -139,7 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="can.h" />
     <ClInclude Include="canfactory.h" />
+    <ClInclude Include="command.h" />
+    <ClInclude Include="factory.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="prototype.h" />
     <ClInclude Include="stapleorder.h" />
@@ -150,7 +153,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="canfactory.cpp" />
+    <ClCompile Include="can.cpp" />
+    <ClCompile Include="factory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="order.cpp" />
     <ClCompile Include="storehouse.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
