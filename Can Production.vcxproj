@@ -141,8 +141,10 @@
   <ItemGroup>
     <ClInclude Include="can.h" />
     <ClInclude Include="canfactory.h" />
+    <ClInclude Include="ChainOfResponsibility.h" />
     <ClInclude Include="command.h" />
     <ClInclude Include="factory.h" />
+    <ClInclude Include="Finance.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="prototype.h" />
     <ClInclude Include="stapleorder.h" />
@@ -154,7 +156,9 @@
   <ItemGroup>
     <ClCompile Include="canfactory.cpp" />
     <ClCompile Include="can.cpp" />
+    <ClCompile Include="ChainOfResponsibility.cpp" />
     <ClCompile Include="factory.cpp" />
+    <ClCompile Include="Finance.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="order.cpp" />
     <ClCompile Include="storehouse.cpp" />

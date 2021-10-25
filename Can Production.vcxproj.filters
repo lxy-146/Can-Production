@@ -48,6 +48,12 @@
     <ClInclude Include="command.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Finance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ChainOfResponsibility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +72,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="order.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Finance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainOfResponsibility.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
