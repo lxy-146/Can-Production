@@ -5,7 +5,6 @@
 #include <map>
 #include <vector>
 using namespace std;
-
 class Kind {
 public:
     virtual void produceKind(){}
