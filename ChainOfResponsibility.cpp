@@ -1,4 +1,3 @@
-#include<iostream>
 #include "ChainOfResponsibility.h"
 using namespace std;
 

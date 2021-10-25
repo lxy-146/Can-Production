@@ -1,8 +1,6 @@
 #ifndef PROTOTYPE_H
 #define PROTOTYPE_H
-#include <iostream>
-#include <string>
-using namespace std;
+#include"header.h"
 
 class Prototype
 {

@@ -7,7 +7,9 @@ using namespace std;
 #include<list>
 #include<assert.h>
 #include<string>
+#include<string.h>
 #include<typeinfo>
+#include<vector>
 
 #endif
 #pragma once

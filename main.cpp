@@ -9,10 +9,19 @@
 #include"can.h"
 #include"Finance.h"
 #include "ChainOfResponsibility.h"
+#include "MediatorModel.h"
+#include"OrderStateMode.h"
+#include"IteratorMode .h"
+#include"canclass.h"
+#include"grouping_packaging.h"
 
 void finance();
 void produce();
 void personnelmanagement();
+void mediator();
+void IteratorStateSingeton();
+void jpch();
+void order();
 
 int main() {
 	
@@ -20,6 +29,7 @@ int main() {
 	produce();
 	finance();
 	personnelmanagement();
+	order();
 
 	return 0;
 }
@@ -140,4 +150,168 @@ void personnelmanagement() {
 		cout << "请选择请求类型：";
 	}
 
+}
+
+
+
+void jpFunction() {
+	int a;
+	group_builder* builder = new group_builder();
+	while (1) {
+		builder->show_all_group();
+		builder->create_group();
+		cout << "输入0以结束此功能" << endl;
+		cout << "输入1以继续添加套餐" << endl;
+		cin >> a;
+		if (a == 0)
+			break;
+		else if (a == 1)
+			;
+		else
+		{
+			cout << "输入的指令错误请重新输入" << endl;
+			system("pause");
+		}
+
+	}
+	delete builder;
+}
+
+void order() {
+	mediator();
+	IteratorStateSingeton();
+	jpch();
+}
+
+void mediator() {//简单的中介者
+	ConcreteMediator* p = new ConcreteMediator();
+	Colleague* pCol1 = new ConcreteColleague_0(p);
+	Colleague* pCol2 = new ConcreteColleague_1(p);
+	p->addColleague(pCol1, pCol2);
+	pCol1->send("老板您好，我需要买罐头");
+	pCol2->send("您好，我这里有10个罐头可以卖给你");
+	delete pCol1;
+	delete pCol2;
+	delete p;
+}
+
+//迭代器+状态+单例模式
+void IteratorStateSingeton() {
+	//创建迭代器和容器
+	int id = 0;
+	vector<Order2>* list = new vector<Order2>;//list是订单的容器的指针
+	ConcreteAggregate* aggregate = new ConcreteAggregate(list);
+	ConcreteIterator* iterator = new ConcreteIterator();
+	aggregate->createIterator(iterator, id);
+	//输入指令进行操作，可以添加订单也可以删除订单
+	//每一天过去之后需要主动的更改订单的状态，
+	//所以需要日期的辅助记时变量以及订单数目辅助变量
+	int nowDay = 0;//当前日期
+	int count = 0;//订单数目
+	cout << "请输入指令:" << endl;
+	cout << "输入0可以退出" << endl;
+	cout << "输入1可以添加订单" << endl;
+	cout << "输入2可以删除指定的订单" << endl;
+	cout << "输入3可以顺序遍历查看订单" << endl;
+	cout << "输入4可以倒序遍历查看订单" << endl;
+	cout << "输入5可以查看当前的订单数目" << endl;
+	cout << "输入6可以查看当前的订单" << endl;
+	cout << "输入7可以查看当前订单的下一个" << endl;
+	cout << "输入8可以查看当前订单的第一个" << endl;
+	cout << "输入9可以查看当前订单的最后一个" << endl;
+	cout << "输入10可以增加一天的日期" << endl;
+	while (1) {
+		cout << endl << "今天是第" << nowDay << "天" << endl;
+		int command;
+		cout << "请输入您的指令" << endl;
+		cin >> command;
+		cout << "您输入的指令为:" << command << endl;
+		if (command == 0)
+			break;
+		//添加指令
+		else if (command == 1)
+		{
+			//添加订单到容器
+			aggregate->addOrder(nowDay, count, nowDay);
+			count++;//订单数增加
+			//迭代器的参数更新,需要注意起始的订单id变化
+			iterator->SetIterator(id, count);
+		}
+		else if (command == 2) {
+			//删除已经完成的订单
+			if (aggregate->deleteOrder())
+			{
+				cout << "删除成功" << endl;
+				count--;//删除订单
+
+
+				//迭代器的参数更新,需要注意起始的订单id变化
+				iterator->SetIterator(id, count);
+			}
+			else
+				cout << "输入的id错误,删除失败" << endl;
+		}
+		else if (command == 3) {
+			//顺序遍历
+			aggregate->showHtoT();
+		}
+		else if (command == 4)
+		{	//逆序遍历
+			aggregate->showTtoH();
+		}
+		else if (command == 5) {
+			//获取当前的订单的数目
+			cout << "当前的订单数目为:" << endl;
+			cout << aggregate->getSize() << endl;
+		}
+		else if (command == 6) {
+			//查看当前的订单
+			(iterator->now(aggregate).ShowState());
+		}
+		else if (command == 7) {
+			//查看当前订单的下一个
+			iterator->next(aggregate).ShowState();
+		}
+		else if (command == 8) {
+			//查看当前订单的第一个
+			iterator->first(aggregate).ShowState();
+		}
+		else if (command == 9) {
+			//查看当前订单的最后一个
+			iterator->end(aggregate).ShowState();
+		}
+		else if (command == 10) {
+			nowDay++;//日期增加,需要指令输入实现
+		//订单信息需要根据时间变化更新
+			aggregate->InfoUpgrate(nowDay);
+		}
+		else
+			cout << "输入指令错误，请重新输入" << endl;
+	}
+	delete list;
+}
+
+void jpch() {
+	cout << "请输入指令操作" << endl;
+	cout << "输入1展示建造者模式、组件模式、策略模式组合" << endl;
+	cout << "输入2展示中介者模式" << endl;
+	cout << "输入3展示状态模式、迭代器模式、单例模式组合" << endl;
+	cout << "输入4退出" << endl;
+	while (1) {
+		int order;
+		cin >> order;
+		if (order == 1) {
+			jpFunction();
+		}
+		else if (order == 2) {
+			mediator();
+		}
+		else if (order == 3) {
+			IteratorStateSingeton();
+		}
+		else if (order == 4) {
+			break;
+		}
+		else cout << "您输入的指令错误" << endl;
+	}
 }

@@ -1,4 +1,25 @@
 ﻿  ChainOfResponsibility.cpp
+  ConcreteAggregate.cpp
+  ConcreteIterator.cpp
+  Finance.cpp
+  OrderStateModel.cpp
+  can.cpp
+D:\github\Can-Production\can.cpp(14,13): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+  canclass.cpp
+  canfactory.cpp
+  factory.cpp
+  grouping_packaging.cpp
+D:\github\Can-Production\grouping_packaging.cpp(5,17): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
   main.cpp
+  order.cpp
+  storehouse.cpp
   正在生成代码...
+D:\github\Can-Production\factory.cpp(34): warning C4715: “KindFactory::getKind”: 不是所有的控件路径都返回值
+D:\github\Can-Production\factory.cpp(11): warning C4715: “FactoryProducer::getFactory”: 不是所有的控件路径都返回值
+D:\github\Can-Production\factory.cpp(20): warning C4715: “PackedgeFactory::getPackedge”: 不是所有的控件路径都返回值
+D:\github\Can-Production\ConcreteIterator.cpp(30): warning C4715: “ConcreteIterator::next”: 不是所有的控件路径都返回值
+D:\github\Can-Production\ConcreteIterator.cpp(41): warning C4715: “ConcreteIterator::end”: 不是所有的控件路径都返回值
+D:\github\Can-Production\ConcreteIterator.cpp(14): warning C4715: “ConcreteIterator::first”: 不是所有的控件路径都返回值
+D:\github\Can-Production\ConcreteIterator.cpp(51): warning C4715: “ConcreteIterator::now”: 不是所有的控件路径都返回值
+D:\github\Can-Production\ConcreteAggregate.cpp(116): warning C4715: “ConcreteAggregate::GetOrder”: 不是所有的控件路径都返回值
   Can Production.vcxproj -> D:\github\Can-Production\x64\Debug\Can Production.exe

@@ -1,8 +1,5 @@
 #pragma once
-#include<iostream>
-#include<string>
-#include<list>
-using namespace std;
+#include"header.h"
 
 //代理模式中的Subject类
 class Subject {

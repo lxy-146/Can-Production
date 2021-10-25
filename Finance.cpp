@@ -1,8 +1,4 @@
-#include<iostream>
-#include<string>
-#include<list>
 #include"Finance.h"
-using namespace std;
 
 Memento::Memento(string state) {
 	this->state = state;

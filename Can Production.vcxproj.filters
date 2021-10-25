@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="staple.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="header.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -54,6 +51,21 @@
     <ClInclude Include="ChainOfResponsibility.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="canclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="grouping_packaging.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IteratorMode .h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MediatorModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderStateMode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -78,6 +90,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ChainOfResponsibility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="canclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcreteAggregate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcreteIterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="grouping_packaging.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderStateModel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

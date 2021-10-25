@@ -140,27 +140,36 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="can.h" />
+    <ClInclude Include="canclass.h" />
     <ClInclude Include="canfactory.h" />
     <ClInclude Include="ChainOfResponsibility.h" />
     <ClInclude Include="command.h" />
     <ClInclude Include="factory.h" />
     <ClInclude Include="Finance.h" />
+    <ClInclude Include="grouping_packaging.h" />
     <ClInclude Include="header.h" />
+    <ClInclude Include="IteratorMode .h" />
+    <ClInclude Include="MediatorModel.h" />
+    <ClInclude Include="OrderStateMode.h" />
     <ClInclude Include="prototype.h" />
     <ClInclude Include="stapleorder.h" />
-    <ClInclude Include="staple.h" />
     <ClInclude Include="stapleobserve.h" />
     <ClInclude Include="storehouse.h" />
     <ClInclude Include="decoration.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="canclass.cpp" />
     <ClCompile Include="canfactory.cpp" />
     <ClCompile Include="can.cpp" />
     <ClCompile Include="ChainOfResponsibility.cpp" />
+    <ClCompile Include="ConcreteAggregate.cpp" />
+    <ClCompile Include="ConcreteIterator.cpp" />
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="Finance.cpp" />
+    <ClCompile Include="grouping_packaging.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="order.cpp" />
+    <ClCompile Include="OrderStateModel.cpp" />
     <ClCompile Include="storehouse.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -11,7 +11,7 @@ void Can::setprice(int p) {
 }
 
 int Can::getbigprice() {
-	return 1.5 * price;
+	return 2 * price;
 }
 
 int Can::getsmallprice() {
