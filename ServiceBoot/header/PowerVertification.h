@@ -44,14 +44,14 @@ public:
 };
 
 //上下文全局信息类
-class Context {
+class ContextInterpreter {
 private:
 	std::vector<std::string> cans;
 	std::vector<std::string> equipments;
 	std::shared_ptr<Expression> smartAndExpr;
 
 public:
-	Context();
+	ContextInterpreter();
 
 	void IsFree(const std::string& info);
 };

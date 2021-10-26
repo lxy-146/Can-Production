@@ -33,7 +33,7 @@ bool AndExpression::Interpret(const std::string& info)
 
 
 //上下文全局信息类
-Context::Context()
+ContextInterpreter::ContextInterpreter()
 {
 	cans.push_back("Meat");
 	cans.push_back("Vegetable");
@@ -42,7 +42,7 @@ Context::Context()
 	smartAndExpr = std::make_shared<AndExpression>(std::make_shared<TerminalExpressin>(cans), std::make_shared<TerminalExpressin>(equipments));
 }
 
-void Context::IsFree(const std::string& info)
+void ContextInterpreter::IsFree(const std::string& info)
 {
 	if (smartAndExpr->Interpret(info))
 	{

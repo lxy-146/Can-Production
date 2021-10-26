@@ -6,7 +6,6 @@
 #include <map>
 #include <list>
 #include <string>
-#include <any>
 #include <iostream>
 
 //ºÚ°åÀà
@@ -17,10 +16,10 @@ private:
 	struct BlackBoardTimer {
 		float timer;
 		std::string key;
-		std::any value;
+		bool value;
 	};
 protected:
-	std::map<std::string, std::any> mDatas;
+	std::map<std::string, bool> mDatas;
 	std::list<BlackBoardTimer> mTimers;
 public:
 	BlackBoard();

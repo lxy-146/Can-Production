@@ -4,6 +4,7 @@
 
 void EquipmentBoot::Boot()
 {
+	std::cout << std::endl;
 	std::cout << "=====Power Vertification ON !====" << std::endl;
 	PowerVertificationOn();
 	std::cout << "=====Equipment Manager ON !====" << std::endl;
@@ -22,7 +23,7 @@ void EquipmentBoot::Boot()
 void EquipmentBoot::PowerVertificationOn()
 {
 	std::cout << std::endl;
-	std::shared_ptr<Context> bus = std::make_shared<Context>();
+	std::shared_ptr<ContextInterpreter> bus = std::make_shared<ContextInterpreter>();
 	std::vector<std::string> equipments = { "Meat Processor" , "Vegetable Processor" , "Fruit Processor" , "Meat Productor" , "Vegetable Productor" , "Fruit Productor" };
 	for (std::string equipment : equipments)
 	{
@@ -102,3 +103,12 @@ void EquipmentBoot::BlackBoardOn()
 	blockBoard.showBlackBoard();
 	std::cout << std::endl;
 }
+
+//int main()
+//{
+//	EquipmentBoot equipmentBoot;
+//	equipmentBoot.Boot();
+//
+//	system("pause");
+//	return 0;
+//}

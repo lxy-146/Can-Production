@@ -16,7 +16,7 @@
 #include"grouping_packaging.h"
 #include"kindof.h"
 #include"State.h"
-//#include"EquipmentBoot.h"
+#include"EquipmentBoot.h"
 #include"Context.h"
 
 void finance();
@@ -81,8 +81,8 @@ void produce() {
 	broker.placeorder();
 
 	//外观模式、解释器模式
-	//EquipmentBoot eb;
-	//eb.Boot();
+	EquipmentBoot eb;
+	eb.Boot();
 
 	//装饰者模式
 	Can* fruit_can = new FruitCan();//实例化一个蔬菜罐头
