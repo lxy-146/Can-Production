@@ -117,12 +117,20 @@ void produce() {
 	cout << endl;
 
 	//原型模式包装罐头
-	ConcretePrototype* fruitCanPrototype = new ConcretePrototype("Fruit can is already packed.");
-	fruitCanPrototype->show();
-	ConcretePrototype2* fruitCan1 = (ConcretePrototype2*)fruitCanPrototype->clone();
-	fruitCan1->show();
-	ConcretePrototype2* fruitCan2 = (ConcretePrototype2*)fruitCanPrototype->clone();
-	fruitCan2->show();
+	auto* fruitCanPack = new packConcPrototype("big","fruit");
+	fruitCanPack->display();
+
+	auto* cloneFruitCanPack = fruitCanPack->clone();
+	cloneFruitCanPack->display();
+
+	auto* resizedFruitCanPack = fruitCanPack->clone();
+	resizedFruitCanPack->setSize("small");
+	resizedFruitCanPack->display();
+
+	auto* retypedFruitCanPack = fruitCanPack->clone();
+	retypedFruitCanPack->setType("meat");
+	retypedFruitCanPack->display();
+	cout << endl;
 }
 
 void finance() {
