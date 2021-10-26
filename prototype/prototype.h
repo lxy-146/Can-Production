@@ -2,54 +2,54 @@
 #define PROTOTYPE_H
 #include"header.h"
 
-class Prototype
+class packAbsPrototype {
+    //抽象原型类
+public:
+    //虚函数，待具体原型类实现
+    virtual ~packAbsPrototype() = default;
+    virtual packAbsPrototype* clone() = 0;
+    //核心clone函数
+    virtual void setType(string t) = 0;
+    virtual void setSize(string s) = 0;
+    virtual void display() = 0;
+protected:
+    packAbsPrototype() = default;
+};
+
+class packConcPrototype : public packAbsPrototype
 {
 private:
-    string str;
+    string size, type;
 public:
-    Prototype(string s)
-    {
-        str = s;
-    }
-    Prototype()
-    {
-        str = "";
-    }
-    void show()
-    {
-        cout << str << endl;
-    }
-    virtual Prototype* clone() = 0;
-};
+    
+    packConcPrototype(string s, string t) {
+        size = s;
+        type = t;
+    };
 
-class ConcretePrototype :public Prototype
-{
-public:
-    ConcretePrototype(string s) :Prototype(s)
-    {}
-    ConcretePrototype() {}
-    virtual Prototype* clone()
+    void setType(string t)
     {
-        ConcretePrototype* p = new ConcretePrototype();
-        *p = *this;
+        type = t;
+    }
+    //设置罐头种类
+    void setSize(string s)
+    {
+        size = s;
+    }
+    //设置罐头大小
+    void display()
+    {
+        cout << "A " << size <<" "<< type <<" can is already packed!"<< endl;
+        //展示罐头种类以及大小
+    }
+    packAbsPrototype* clone() override
+    {
+        auto* p =new packConcPrototype(size, type);
         return p;
     }
+    //对已有对象进行拷贝
 };
 
-
-class ConcretePrototype2 :public Prototype
-{
-public:
-    ConcretePrototype2(string s) :Prototype(s)
-    {}
-    ConcretePrototype2() {}
-    virtual Prototype* clone()
-    {
-        ConcretePrototype2* p = new ConcretePrototype2();
-        *p = *this;
-        return p;
-    }
-};
 
 #endif
 
