@@ -78,6 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\ServiceBoot\src;.\ServiceBoot\header;.\flyweightbridge;.\prototype;.\kindof;.\decoration;.\inc;.\src;.\ServiceBoot;.\StateVisitor;.\PersonalManagement;.\observe;.\IteratorStatemediator;.\FinanceManagement;.\command;.\builder;.\abstractfactoryFactory;$(IncludePath)</IncludePath>
+    <ExecutablePath>D:\github\Can-Production\StateVisitor;D:\github\Can-Production\ServiceBoot;D:\github\Can-Production\PersonalManagement;D:\github\Can-Production\observe;D:\github\Can-Production\IteratorStatemediator;D:\github\Can-Production\FinanceManagement;D:\github\Can-Production\command;D:\github\Can-Production\builder;D:\github\Can-Production\abstractfactoryFactory;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -116,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,45 +142,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="can.h" />
-    <ClInclude Include="canclass.h" />
-    <ClInclude Include="canfactory.h" />
-    <ClInclude Include="ChainOfResponsibility.h" />
-    <ClInclude Include="command.h" />
-    <ClInclude Include="Context.h" />
-    <ClInclude Include="factory.h" />
-    <ClInclude Include="Finance.h" />
-    <ClInclude Include="grouping_packaging.h" />
-    <ClInclude Include="header.h" />
-    <ClInclude Include="IteratorMode .h" />
-    <ClInclude Include="kindof.h" />
-    <ClInclude Include="MediatorModel.h" />
-    <ClInclude Include="OrderStateMode.h" />
-    <ClInclude Include="prototype.h" />
-    <ClInclude Include="stapleorder.h" />
-    <ClInclude Include="stapleobserve.h" />
-    <ClInclude Include="State.h" />
-    <ClInclude Include="storehouse.h" />
-    <ClInclude Include="decoration.h" />
-    <ClInclude Include="Visitor.h" />
+    <ClInclude Include="abstractfactoryFactory\factory.h" />
+    <ClInclude Include="builder\canclass.h" />
+    <ClInclude Include="builder\grouping_packaging.h" />
+    <ClInclude Include="command\command.h" />
+    <ClInclude Include="decoration\decoration.h" />
+    <ClInclude Include="FinanceManagement\Finance.h" />
+    <ClInclude Include="inc\can.h" />
+    <ClInclude Include="inc\canfactory.h" />
+    <ClInclude Include="inc\header.h" />
+    <ClInclude Include="IteratorStatemediator\IteratorMode .h" />
+    <ClInclude Include="IteratorStatemediator\MediatorModel.h" />
+    <ClInclude Include="IteratorStatemediator\OrderStateMode.h" />
+    <ClInclude Include="kindof\kindof.h" />
+    <ClInclude Include="observe\stapleobserve.h" />
+    <ClInclude Include="observe\stapleorder.h" />
+    <ClInclude Include="observe\storehouse.h" />
+    <ClInclude Include="PersonalManagement\ChainOfResponsibility.h" />
+    <ClInclude Include="prototype\prototype.h" />
+    <ClInclude Include="StateVisitor\Context.h" />
+    <ClInclude Include="StateVisitor\State.h" />
+    <ClInclude Include="StateVisitor\Visitor.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="canclass.cpp" />
-    <ClCompile Include="canfactory.cpp" />
-    <ClCompile Include="can.cpp" />
-    <ClCompile Include="ChainOfResponsibility.cpp" />
-    <ClCompile Include="ConcreteAggregate.cpp" />
-    <ClCompile Include="ConcreteIterator.cpp" />
-    <ClCompile Include="Context.cpp" />
-    <ClCompile Include="factory.cpp" />
-    <ClCompile Include="Finance.cpp" />
-    <ClCompile Include="grouping_packaging.cpp" />
+    <ClCompile Include="abstractfactoryFactory\factory.cpp" />
+    <ClCompile Include="builder\canclass.cpp" />
+    <ClCompile Include="builder\grouping_packaging.cpp" />
+    <ClCompile Include="FinanceManagement\Finance.cpp" />
+    <ClCompile Include="IteratorStatemediator\ConcreteAggregate.cpp" />
+    <ClCompile Include="IteratorStatemediator\ConcreteIterator.cpp" />
+    <ClCompile Include="IteratorStatemediator\OrderStateModel.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="order.cpp" />
-    <ClCompile Include="OrderStateModel.cpp" />
-    <ClCompile Include="State.cpp" />
-    <ClCompile Include="storehouse.cpp" />
-    <ClCompile Include="Visitor.cpp" />
+    <ClCompile Include="observe\order.cpp" />
+    <ClCompile Include="observe\storehouse.cpp" />
+    <ClCompile Include="PersonalManagement\ChainOfResponsibility.cpp" />
+    <ClCompile Include="src\can.cpp" />
+    <ClCompile Include="src\canfactory.cpp" />
+    <ClCompile Include="StateVisitor\Context.cpp" />
+    <ClCompile Include="StateVisitor\State.cpp" />
+    <ClCompile Include="StateVisitor\Visitor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

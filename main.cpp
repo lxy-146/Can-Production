@@ -16,6 +16,8 @@
 #include"grouping_packaging.h"
 #include"kindof.h"
 #include"State.h"
+//#include"EquipmentBoot.h"
+#include"Context.h"
 
 void finance();
 void produce();
@@ -77,6 +79,10 @@ void produce() {
 	broker.takeorder(new KMakeOrder(kind));
 	broker.takeorder(new PMakeOrder(packedge));
 	broker.placeorder();
+
+	//外观模式、解释器模式
+	//EquipmentBoot eb;
+	//eb.Boot();
 
 	//装饰者模式
 	Can* fruit_can = new FruitCan();//实例化一个蔬菜罐头

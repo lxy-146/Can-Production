@@ -16,17 +16,8 @@
     <Filter Include="builder">
       <UniqueIdentifier>{02d42691-3a0b-4387-b4d7-32aace8a2375}</UniqueIdentifier>
     </Filter>
-    <Filter Include="builder\src">
-      <UniqueIdentifier>{5d2ca575-fb90-4239-b5e9-f4ff08531c44}</UniqueIdentifier>
-    </Filter>
     <Filter Include="IteratorStatemediator">
       <UniqueIdentifier>{1e7f5ca8-581a-4609-a176-c4b632f7314f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IteratorStatemediator\State">
-      <UniqueIdentifier>{fdaf10ed-6910-416f-93e9-264956e33ba1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IteratorStatemediator\Iterator">
-      <UniqueIdentifier>{ac69f6b2-a33b-43de-acd7-d4cfa6a29030}</UniqueIdentifier>
     </Filter>
     <Filter Include="abstractfactoryFactory">
       <UniqueIdentifier>{fef6fb4d-a90a-4912-a506-19860ad1cb57}</UniqueIdentifier>
@@ -46,120 +37,138 @@
     <Filter Include="StateVisitor">
       <UniqueIdentifier>{732f9b44-0abd-49ef-9bf4-820a355ce718}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\inc">
+      <UniqueIdentifier>{2801dd73-1c62-455c-89ec-52dca03c1ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="decoration">
+      <UniqueIdentifier>{32d799ff-c448-4cea-850c-8f06a197055d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kindof">
+      <UniqueIdentifier>{f42e8a0a-5ad6-4c1a-99ff-6ed71d9ee6ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="prototype">
+      <UniqueIdentifier>{488c16dc-0ebd-42b0-b558-12d5318b46c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{7e839072-094e-41ec-ba81-8b1cf90012c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flyweightbridge">
+      <UniqueIdentifier>{8311e68f-42a4-4c8b-9c5c-8095329b61dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="canfactory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="prototype.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="decoration.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="can.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="kindof.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MediatorModel.h">
-      <Filter>IteratorStatemediator</Filter>
-    </ClInclude>
-    <ClInclude Include="canclass.h">
-      <Filter>builder\src</Filter>
-    </ClInclude>
-    <ClInclude Include="grouping_packaging.h">
-      <Filter>builder\src</Filter>
-    </ClInclude>
-    <ClInclude Include="OrderStateMode.h">
-      <Filter>IteratorStatemediator\State</Filter>
-    </ClInclude>
-    <ClInclude Include="IteratorMode .h">
-      <Filter>IteratorStatemediator\Iterator</Filter>
-    </ClInclude>
-    <ClInclude Include="factory.h">
+    <ClInclude Include="abstractfactoryFactory\factory.h">
       <Filter>abstractfactoryFactory</Filter>
     </ClInclude>
-    <ClInclude Include="command.h">
+    <ClInclude Include="builder\canclass.h">
+      <Filter>builder</Filter>
+    </ClInclude>
+    <ClInclude Include="builder\grouping_packaging.h">
+      <Filter>builder</Filter>
+    </ClInclude>
+    <ClInclude Include="command\command.h">
       <Filter>command</Filter>
     </ClInclude>
-    <ClInclude Include="stapleobserve.h">
-      <Filter>observe</Filter>
-    </ClInclude>
-    <ClInclude Include="stapleorder.h">
-      <Filter>observe</Filter>
-    </ClInclude>
-    <ClInclude Include="storehouse.h">
-      <Filter>observe</Filter>
-    </ClInclude>
-    <ClInclude Include="Finance.h">
+    <ClInclude Include="FinanceManagement\Finance.h">
       <Filter>FinanceManagement</Filter>
     </ClInclude>
-    <ClInclude Include="ChainOfResponsibility.h">
+    <ClInclude Include="IteratorStatemediator\IteratorMode .h">
+      <Filter>IteratorStatemediator</Filter>
+    </ClInclude>
+    <ClInclude Include="IteratorStatemediator\MediatorModel.h">
+      <Filter>IteratorStatemediator</Filter>
+    </ClInclude>
+    <ClInclude Include="IteratorStatemediator\OrderStateMode.h">
+      <Filter>IteratorStatemediator</Filter>
+    </ClInclude>
+    <ClInclude Include="observe\stapleobserve.h">
+      <Filter>observe</Filter>
+    </ClInclude>
+    <ClInclude Include="observe\stapleorder.h">
+      <Filter>observe</Filter>
+    </ClInclude>
+    <ClInclude Include="observe\storehouse.h">
+      <Filter>observe</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonalManagement\ChainOfResponsibility.h">
       <Filter>PersonalManagement</Filter>
     </ClInclude>
-    <ClInclude Include="Context.h">
+    <ClInclude Include="StateVisitor\Context.h">
       <Filter>StateVisitor</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
+    <ClInclude Include="StateVisitor\State.h">
       <Filter>StateVisitor</Filter>
     </ClInclude>
-    <ClInclude Include="Visitor.h">
+    <ClInclude Include="StateVisitor\Visitor.h">
       <Filter>StateVisitor</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\can.h">
+      <Filter>头文件\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\canfactory.h">
+      <Filter>头文件\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\header.h">
+      <Filter>头文件\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoration\decoration.h">
+      <Filter>decoration</Filter>
+    </ClInclude>
+    <ClInclude Include="kindof\kindof.h">
+      <Filter>kindof</Filter>
+    </ClInclude>
+    <ClInclude Include="prototype\prototype.h">
+      <Filter>prototype</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="canfactory.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="can.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="grouping_packaging.cpp">
-      <Filter>builder</Filter>
-    </ClCompile>
-    <ClCompile Include="OrderStateModel.cpp">
-      <Filter>IteratorStatemediator\State</Filter>
-    </ClCompile>
-    <ClCompile Include="ConcreteIterator.cpp">
-      <Filter>IteratorStatemediator\Iterator</Filter>
-    </ClCompile>
-    <ClCompile Include="ConcreteAggregate.cpp">
-      <Filter>IteratorStatemediator\Iterator</Filter>
-    </ClCompile>
-    <ClCompile Include="factory.cpp">
+    <ClCompile Include="abstractfactoryFactory\factory.cpp">
       <Filter>abstractfactoryFactory</Filter>
     </ClCompile>
-    <ClCompile Include="canclass.cpp">
+    <ClCompile Include="builder\canclass.cpp">
       <Filter>builder</Filter>
     </ClCompile>
-    <ClCompile Include="storehouse.cpp">
-      <Filter>observe</Filter>
+    <ClCompile Include="builder\grouping_packaging.cpp">
+      <Filter>builder</Filter>
     </ClCompile>
-    <ClCompile Include="order.cpp">
-      <Filter>observe</Filter>
-    </ClCompile>
-    <ClCompile Include="Finance.cpp">
+    <ClCompile Include="FinanceManagement\Finance.cpp">
       <Filter>FinanceManagement</Filter>
     </ClCompile>
-    <ClCompile Include="ChainOfResponsibility.cpp">
+    <ClCompile Include="IteratorStatemediator\ConcreteAggregate.cpp">
+      <Filter>IteratorStatemediator</Filter>
+    </ClCompile>
+    <ClCompile Include="IteratorStatemediator\ConcreteIterator.cpp">
+      <Filter>IteratorStatemediator</Filter>
+    </ClCompile>
+    <ClCompile Include="IteratorStatemediator\OrderStateModel.cpp">
+      <Filter>IteratorStatemediator</Filter>
+    </ClCompile>
+    <ClCompile Include="observe\order.cpp">
+      <Filter>observe</Filter>
+    </ClCompile>
+    <ClCompile Include="observe\storehouse.cpp">
+      <Filter>observe</Filter>
+    </ClCompile>
+    <ClCompile Include="PersonalManagement\ChainOfResponsibility.cpp">
       <Filter>PersonalManagement</Filter>
     </ClCompile>
-    <ClCompile Include="Context.cpp">
+    <ClCompile Include="StateVisitor\Context.cpp">
       <Filter>StateVisitor</Filter>
     </ClCompile>
-    <ClCompile Include="State.cpp">
+    <ClCompile Include="StateVisitor\State.cpp">
       <Filter>StateVisitor</Filter>
     </ClCompile>
-    <ClCompile Include="Visitor.cpp">
+    <ClCompile Include="StateVisitor\Visitor.cpp">
       <Filter>StateVisitor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\can.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canfactory.cpp">
+      <Filter>源文件\src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

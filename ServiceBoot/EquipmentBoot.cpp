@@ -102,12 +102,3 @@ void EquipmentBoot::BlackBoardOn()
 	blockBoard.showBlackBoard();
 	std::cout << std::endl;
 }
-
-int main()
-{
-	EquipmentBoot equipmentBoot;
-	equipmentBoot.Boot();
-
-	system("pause");
-	return 0;
-}
