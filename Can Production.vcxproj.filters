@@ -13,21 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="builder">
+      <UniqueIdentifier>{02d42691-3a0b-4387-b4d7-32aace8a2375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="builder\src">
+      <UniqueIdentifier>{5d2ca575-fb90-4239-b5e9-f4ff08531c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IteratorStatemediator">
+      <UniqueIdentifier>{1e7f5ca8-581a-4609-a176-c4b632f7314f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IteratorStatemediator\State">
+      <UniqueIdentifier>{fdaf10ed-6910-416f-93e9-264956e33ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IteratorStatemediator\Iterator">
+      <UniqueIdentifier>{ac69f6b2-a33b-43de-acd7-d4cfa6a29030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="abstractfactoryFactory">
+      <UniqueIdentifier>{fef6fb4d-a90a-4912-a506-19860ad1cb57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="command">
+      <UniqueIdentifier>{7b75eecb-1f9f-4bc0-bd01-0c8e5cfe1284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="observe">
+      <UniqueIdentifier>{cd95847d-3317-446f-b473-137d6bdba2f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FinanceManagement">
+      <UniqueIdentifier>{67af1742-a9ae-4793-8d9e-08b882b961d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PersonalManagement">
+      <UniqueIdentifier>{f0c4da5c-9f0e-416f-b13e-baf20fc9282d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StateVisitor">
+      <UniqueIdentifier>{732f9b44-0abd-49ef-9bf4-820a355ce718}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="stapleorder.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="canfactory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="storehouse.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="stapleobserve.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="prototype.h">
@@ -39,42 +63,57 @@
     <ClInclude Include="can.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="factory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="command.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Finance.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ChainOfResponsibility.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="canclass.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="grouping_packaging.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="IteratorMode .h">
+    <ClInclude Include="kindof.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MediatorModel.h">
-      <Filter>头文件</Filter>
+      <Filter>IteratorStatemediator</Filter>
+    </ClInclude>
+    <ClInclude Include="canclass.h">
+      <Filter>builder\src</Filter>
+    </ClInclude>
+    <ClInclude Include="grouping_packaging.h">
+      <Filter>builder\src</Filter>
     </ClInclude>
     <ClInclude Include="OrderStateMode.h">
-      <Filter>头文件</Filter>
+      <Filter>IteratorStatemediator\State</Filter>
     </ClInclude>
-    <ClInclude Include="kindof.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="IteratorMode .h">
+      <Filter>IteratorStatemediator\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="factory.h">
+      <Filter>abstractfactoryFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>command</Filter>
+    </ClInclude>
+    <ClInclude Include="stapleobserve.h">
+      <Filter>observe</Filter>
+    </ClInclude>
+    <ClInclude Include="stapleorder.h">
+      <Filter>observe</Filter>
+    </ClInclude>
+    <ClInclude Include="storehouse.h">
+      <Filter>observe</Filter>
+    </ClInclude>
+    <ClInclude Include="Finance.h">
+      <Filter>FinanceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="ChainOfResponsibility.h">
+      <Filter>PersonalManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Context.h">
+      <Filter>StateVisitor</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>StateVisitor</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
+      <Filter>StateVisitor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="storehouse.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="canfactory.cpp">
@@ -83,32 +122,44 @@
     <ClCompile Include="can.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="factory.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="order.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Finance.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ChainOfResponsibility.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="canclass.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ConcreteAggregate.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ConcreteIterator.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="grouping_packaging.cpp">
-      <Filter>源文件</Filter>
+      <Filter>builder</Filter>
     </ClCompile>
     <ClCompile Include="OrderStateModel.cpp">
-      <Filter>源文件</Filter>
+      <Filter>IteratorStatemediator\State</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcreteIterator.cpp">
+      <Filter>IteratorStatemediator\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcreteAggregate.cpp">
+      <Filter>IteratorStatemediator\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="factory.cpp">
+      <Filter>abstractfactoryFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="canclass.cpp">
+      <Filter>builder</Filter>
+    </ClCompile>
+    <ClCompile Include="storehouse.cpp">
+      <Filter>observe</Filter>
+    </ClCompile>
+    <ClCompile Include="order.cpp">
+      <Filter>observe</Filter>
+    </ClCompile>
+    <ClCompile Include="Finance.cpp">
+      <Filter>FinanceManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainOfResponsibility.cpp">
+      <Filter>PersonalManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Context.cpp">
+      <Filter>StateVisitor</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>StateVisitor</Filter>
+    </ClCompile>
+    <ClCompile Include="Visitor.cpp">
+      <Filter>StateVisitor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

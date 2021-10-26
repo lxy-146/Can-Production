@@ -144,6 +144,7 @@
     <ClInclude Include="canfactory.h" />
     <ClInclude Include="ChainOfResponsibility.h" />
     <ClInclude Include="command.h" />
+    <ClInclude Include="Context.h" />
     <ClInclude Include="factory.h" />
     <ClInclude Include="Finance.h" />
     <ClInclude Include="grouping_packaging.h" />
@@ -155,8 +156,10 @@
     <ClInclude Include="prototype.h" />
     <ClInclude Include="stapleorder.h" />
     <ClInclude Include="stapleobserve.h" />
+    <ClInclude Include="State.h" />
     <ClInclude Include="storehouse.h" />
     <ClInclude Include="decoration.h" />
+    <ClInclude Include="Visitor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="canclass.cpp" />
@@ -165,13 +168,16 @@
     <ClCompile Include="ChainOfResponsibility.cpp" />
     <ClCompile Include="ConcreteAggregate.cpp" />
     <ClCompile Include="ConcreteIterator.cpp" />
+    <ClCompile Include="Context.cpp" />
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="Finance.cpp" />
     <ClCompile Include="grouping_packaging.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="order.cpp" />
     <ClCompile Include="OrderStateModel.cpp" />
+    <ClCompile Include="State.cpp" />
     <ClCompile Include="storehouse.cpp" />
+    <ClCompile Include="Visitor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

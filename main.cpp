@@ -15,6 +15,7 @@
 #include"canclass.h"
 #include"grouping_packaging.h"
 #include"kindof.h"
+#include"State.h"
 
 void finance();
 void produce();
@@ -23,6 +24,7 @@ void mediator();
 void IteratorStateSingeton();
 void jpch();
 void order();
+void statevisitor();
 
 int main() {
 	
@@ -31,8 +33,24 @@ int main() {
 	finance();
 	personnelmanagement();
 	order();
+	statevisitor();
 
 	return 0;
+}
+
+void statevisitor() {
+	State2* list[] = { new IdleState(),new RunningState(),new DamageState() };
+	StateVisitor rv;
+	Context* c = new Context();
+	for (int i = 0; i < 3; i++)
+	{
+		/*
+			不同的State调用自己的accept方法，参数为StateVisitor，对State进行访问，获取当前设备的状态
+			然后由context调用request方法，对当前状态进行处理
+		*/
+		list[i]->accept(rv);
+		c->request();
+	}
 }
 
 void produce() {
