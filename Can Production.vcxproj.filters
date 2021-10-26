@@ -55,6 +55,15 @@
     <Filter Include="flyweightbridge">
       <UniqueIdentifier>{8311e68f-42a4-4c8b-9c5c-8095329b61dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ServiceBoot">
+      <UniqueIdentifier>{52776819-c30d-40e7-a3b8-fe626f83e5bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServiceBoot\header">
+      <UniqueIdentifier>{8d5ae1bd-eb62-4b23-aad5-d82f4dfd9a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServiceBoot\src">
+      <UniqueIdentifier>{0f7dbc30-19f5-4e14-a687-62ea656aeaf4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abstractfactoryFactory\factory.h">
@@ -120,6 +129,33 @@
     <ClInclude Include="prototype\prototype.h">
       <Filter>prototype</Filter>
     </ClInclude>
+    <ClInclude Include="ServiceBoot\header\Target.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\BlackBoard.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\ConcreteEquipment.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\Equipment.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\EquipmentBoot.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\EquipmentClassAdapter.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\EquipmentManager.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\EquipmentObjectAdapter.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceBoot\header\PowerVertification.h">
+      <Filter>ServiceBoot\header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -169,6 +205,27 @@
     </ClCompile>
     <ClCompile Include="src\canfactory.cpp">
       <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\BlackBoard.cpp">
+      <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\Equipment.cpp">
+      <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\EquipmentBoot.cpp">
+      <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\EquipmentClassAdapter.cpp">
+      <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\EquipmentManager.cpp">
+      <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\EquipmentObjectAdapter.cpp">
+      <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBoot\src\PowerVertification.cpp">
+      <Filter>ServiceBoot\src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

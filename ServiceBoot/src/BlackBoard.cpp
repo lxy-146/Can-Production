@@ -15,21 +15,16 @@ void BlackBoard::setValue(std::string key, int value)
 }
 
 void BlackBoard::setValue(std::string key, int value, float expiredTime, int expiredValue)
-{
-	setValue(key, value);
-	mTimers.emplace_back(BlackBoardTimer{ expiredTime,key,expiredValue });
-}
+{}
 
 void BlackBoard::setValue(std::string key, float value)
-{
-	mDatas.emplace(key, value);
-}
+{}
 
 void BlackBoard::setValue(std::string key, float value, float expiredTime, float expiredValue)
-{
-	setValue(key, value);
-	mTimers.emplace_back(BlackBoardTimer{ expiredTime,key,expiredValue });
-}
+{}
+
+void BlackBoard::setValue(std::string key, std::string value)
+{}
 
 void BlackBoard::setValue(std::string key, bool value)
 {
@@ -42,33 +37,31 @@ void BlackBoard::setValue(std::string key, bool value, float expiredTime, bool e
 	mTimers.emplace_back(BlackBoardTimer{ expiredTime,key,expiredValue });
 }
 
+
 int BlackBoard::getInt(std::string key)
 {
 	auto& value = mDatas.at(key);
-	return std::any_cast<int>(value);
+	return value;
 }
 
-void BlackBoard::setValue(std::string key, std::string value)
-{
-	mDatas.emplace(key, value);
-}
 
 float BlackBoard::getFloat(std::string key)
 {
 	auto& value = mDatas.at(key);
-	return std::any_cast<float>(value);
+	return value;
 }
 
 bool BlackBoard::getBool(std::string key)
 {
 	auto& value = mDatas.at(key);
-	return std::any_cast<bool>(value);
+	return value;
 }
 
 std::string BlackBoard::getString(std::string key)
 {
 	auto& value = mDatas.at(key);
-	return std::any_cast<std::string>(value);
+	std::string s;
+	return s;
 }
 
 void BlackBoard::update(float dt)
@@ -88,7 +81,7 @@ void BlackBoard::update(float dt)
 
 void BlackBoard::showBlackBoard()
 {
-	std::map<std::string, std::any> ::iterator iter;
+	std::map<std::string, bool> ::iterator iter;
 	iter = mDatas.begin();
 	while (iter != mDatas.end())
 	{
