@@ -7,6 +7,7 @@ D:\github\Can-Production\builder\grouping_packaging.cpp(5,17): warning C4244: �
   ConcreteIterator.cpp
   OrderStateModel.cpp
   main.cpp
+D:\github\Can-Production\prototype\prototype.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\github\Can-Production\StateVisitor\Visitor.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   order.cpp
   storehouse.cpp
@@ -21,12 +22,12 @@ D:\github\Can-Production\StateVisitor\Visitor.h(1,1): warning C4819: 该文件�
 D:\github\Can-Production\StateVisitor\Visitor.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\github\Can-Production\StateVisitor\Visitor.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   正在生成代码...
-D:\github\Can-Production\IteratorStatemediator\ConcreteIterator.cpp(43): warning C4715: “ConcreteIterator::end”: 不是所有的控件路径都返回值
-D:\github\Can-Production\IteratorStatemediator\ConcreteIterator.cpp(30): warning C4715: “ConcreteIterator::next”: 不是所有的控件路径都返回值
 D:\github\Can-Production\IteratorStatemediator\ConcreteIterator.cpp(14): warning C4715: “ConcreteIterator::first”: 不是所有的控件路径都返回值
 D:\github\Can-Production\IteratorStatemediator\ConcreteIterator.cpp(53): warning C4715: “ConcreteIterator::now”: 不是所有的控件路径都返回值
+D:\github\Can-Production\IteratorStatemediator\ConcreteIterator.cpp(43): warning C4715: “ConcreteIterator::end”: 不是所有的控件路径都返回值
+D:\github\Can-Production\IteratorStatemediator\ConcreteIterator.cpp(30): warning C4715: “ConcreteIterator::next”: 不是所有的控件路径都返回值
 D:\github\Can-Production\IteratorStatemediator\ConcreteAggregate.cpp(116): warning C4715: “ConcreteAggregate::GetOrder”: 不是所有的控件路径都返回值
-D:\github\Can-Production\abstractfactoryFactory\factory.cpp(34): warning C4715: “KindFactory::getKind”: 不是所有的控件路径都返回值
 D:\github\Can-Production\abstractfactoryFactory\factory.cpp(11): warning C4715: “FactoryProducer::getFactory”: 不是所有的控件路径都返回值
 D:\github\Can-Production\abstractfactoryFactory\factory.cpp(20): warning C4715: “PackedgeFactory::getPackedge”: 不是所有的控件路径都返回值
+D:\github\Can-Production\abstractfactoryFactory\factory.cpp(34): warning C4715: “KindFactory::getKind”: 不是所有的控件路径都返回值
   Can Production.vcxproj -> D:\github\Can-Production\x64\Debug\Can Production.exe

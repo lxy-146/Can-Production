@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>.\ServiceBoot\src;.\ServiceBoot\header;.\flyweightbridge;.\prototype;.\kindof;.\decoration;.\inc;.\src;.\ServiceBoot;.\StateVisitor;.\PersonalManagement;.\observe;.\IteratorStatemediator;.\FinanceManagement;.\command;.\builder;.\abstractfactoryFactory;$(IncludePath)</IncludePath>
+    <IncludePath>.\ServiceBoot\src;.\ServiceBoot\header;.\flyweightbridge;.\prototype;.\kindof;.\decoration;.\inc;.\src;.\StateVisitor;.\PersonalManagement;.\observe;.\IteratorStatemediator;.\FinanceManagement;.\command;.\builder;.\abstractfactoryFactory;$(IncludePath)</IncludePath>
     <ExecutablePath>D:\github\Can-Production\StateVisitor;D:\github\Can-Production\ServiceBoot;D:\github\Can-Production\PersonalManagement;D:\github\Can-Production\observe;D:\github\Can-Production\IteratorStatemediator;D:\github\Can-Production\FinanceManagement;D:\github\Can-Production\command;D:\github\Can-Production\builder;D:\github\Can-Production\abstractfactoryFactory;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
