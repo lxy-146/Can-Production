@@ -14,6 +14,7 @@
 #include"IteratorMode .h"
 #include"canclass.h"
 #include"grouping_packaging.h"
+#include"kindof.h"
 
 void finance();
 void produce();
@@ -72,6 +73,30 @@ void produce() {
 	Big_Can big_meat_can = Big_Can(meat_can);//生产大型蔬菜罐头
 	small_meat_can.show();
 	big_meat_can.show();
+
+	//惰性工厂模式，生产各种类型的罐头
+	//双胞胎（twin）模式，生产组合类型罐头
+	KindOfMeatCan::getMeatCan("Pork");
+	KindOfMeatCan* beefcan = KindOfMeatCan::getMeatCan("beef");
+	KindOfMeatCan* chicken = KindOfMeatCan::getMeatCan("chicken");
+	KindOfMeatCan::printCurrentTypes();
+	beefcan->show();
+	chicken->show();
+	cout << endl;
+
+	KindOfFruitCan::getFruitCan("apple");
+	KindOfFruitCan::getFruitCan("pear");
+	KindOfFruitCan::getFruitCan("banana");
+	KindOfFruitCan::printCurrentTypes();
+
+	KindOfVegCan* bamboo_beef = KindOfVegCan::getVegCan("bamboo shoots", beefcan);
+	KindOfVegCan* carrot_chicken = KindOfVegCan::getVegCan("carrot", chicken);
+	KindOfVegCan* cucumber = KindOfVegCan::getVegCan("cucumber", NULL);
+	KindOfVegCan::printCurrentTypes();
+	bamboo_beef->mixed();
+	carrot_chicken->mixed();
+	cucumber->mixed();
+	cout << endl;
 
 	//原型模式包装罐头
 	ConcretePrototype* fruitCanPrototype = new ConcretePrototype("Fruit can is already packed.");

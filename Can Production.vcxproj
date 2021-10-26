@@ -149,6 +149,7 @@
     <ClInclude Include="grouping_packaging.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="IteratorMode .h" />
+    <ClInclude Include="kindof.h" />
     <ClInclude Include="MediatorModel.h" />
     <ClInclude Include="OrderStateMode.h" />
     <ClInclude Include="prototype.h" />

@@ -20,8 +20,14 @@ public:
 	virtual void show();
 };
 
-//蔬菜罐头
+//水果罐头
 class FruitCan :public Can {
 public:
 	virtual void show();
+};
+
+//蔬菜罐头
+class VegCan :public Can {
+public:
+	virtual void show() = 0;
 };
