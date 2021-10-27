@@ -2,6 +2,7 @@
 #include"command.h"
 
 void Broker::takeorder(Order* order){
+	cout << "command pattern add an order" << endl;
 	orderlist.push_back(order);
 }
 

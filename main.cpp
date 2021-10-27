@@ -18,6 +18,7 @@
 #include"State.h"
 #include"EquipmentBoot.h"
 #include"Context.h"
+#include<stdlib.h>
 
 void finance();
 void produce();
@@ -28,15 +29,44 @@ void jpch();
 void order();
 void statevisitor();
 
+void showhome() {
+	system("cls");
+	cout << "==============================================="<<endl;
+	cout << "                                              " << endl;
+	cout << " please choose what to show:                  " << endl;
+	cout << "                                              " << endl;
+	cout << "                       1.can-produce          " << endl;
+	cout << "                       2.order management     " << endl;
+	cout << "                       3.finance management   " << endl;
+	cout << "                       4.person management    " << endl;
+	cout << "                       5.equipment management " << endl;
+	cout << "                       0.exit                 " << endl;
+	cout << "                                              " << endl;
+	cout << "                                              " << endl;
+	cout << "===============================================" << endl;
+}
+
 int main() {
-	
-
-	produce();
-	finance();
-	personnelmanagement();
-	order();
-	statevisitor();
-
+	int i=-1;
+	while (true) {
+		showhome();
+		cout << "please choose what to show:";
+		cin >> i;
+		if (i == 1)
+			produce();
+		else if (i == 2)
+			order();
+		else if (i == 3)
+			finance();
+		else if (i == 4)
+			personnelmanagement();
+		else if (i == 5)
+			statevisitor();
+		else if (i == 0)
+			break;
+		else
+			cout << "u input wrong thing" << endl;
+	}
 	return 0;
 }
 
@@ -56,14 +86,17 @@ void statevisitor() {
 }
 
 void produce() {
+	cout << "====Take order:10 fruit,100 meat!====" << endl;
 	OrderSubject* ordersubject = new OrderSubject();//创建一个与observe有关的subject类用来对observe进行控制
 	Observe* fruitobserve = new FruitObserve();//水果方面的observe，与subject进行连接
 	Observe* meatobserve = new MeatObserve();//肉方面的observe，与subject进行连接
 	ordersubject->Attach(fruitobserve);//将水果observe进行连接
 	ordersubject->Attach(meatobserve);//将肉observe进行连接
-	ordersubject->SetOrder(10, 100);//创建一个订单
-	ordersubject->SetOrder(100, 10);
+	ordersubject->SetOrder(10, 100);//创建一个订单：购买10个水果，100个肉
+	//ordersubject->SetOrder(100, 10);
+	cout << endl;
 
+	cout << "====Produce packedge and contents!====" << endl;
 	FactoryProducer facproducer;//抽象工厂模式，用来生产工厂的类
 	AbstractFactory* kindfactory = facproducer.getFactory("kind");//生产种类工厂
 	AbstractFactory* packedgefactory = facproducer.getFactory("packedge");//生产包装工厂
@@ -74,32 +107,27 @@ void produce() {
 	broker.takeorder(new PMakeOrder(packedge));//同上
 	broker.placeorder();//执行所有命令
 	broker.clear();//清除所有命令
-	kind = kindfactory->getKind("meat");//以下为重复
-	packedge = packedgefactory->getPackedge("little");
-	broker.takeorder(new KMakeOrder(kind));
-	broker.takeorder(new PMakeOrder(packedge));
-	broker.placeorder();
+	cout << endl;
 
 	//外观模式、解释器模式
 	EquipmentBoot eb;
 	eb.Boot();
 
 	//装饰者模式
+	cout << endl;
+	cout << "====Assemble cans!====" << endl;
 	Can* fruit_can = new FruitCan();//实例化一个蔬菜罐头
 	Can* meat_can = new MeatCan();//实例化一个肉罐头
 
 	Small_Can small_fruit_can = Small_Can(fruit_can);//生产小型蔬菜罐头
-	Big_Can big_fruit_can = Big_Can(fruit_can);//生产大型蔬菜罐头
+	Big_Can big_meat_can = Big_Can(meat_can);//生产大型肉罐头
 	small_fruit_can.show();
-	big_fruit_can.show();
-
-	Small_Can small_meat_can = Small_Can(meat_can);//生产小型蔬菜罐头
-	Big_Can big_meat_can = Big_Can(meat_can);//生产大型蔬菜罐头
-	small_meat_can.show();
 	big_meat_can.show();
 
 	//惰性工厂模式，生产各种类型的罐头
 	//双胞胎（twin）模式，生产组合类型罐头
+	cout << endl;
+	cout << "====Produce combined cans!====" << endl;
 	KindOfMeatCan::getMeatCan("Pork");
 	KindOfMeatCan* beefcan = KindOfMeatCan::getMeatCan("beef");
 	KindOfMeatCan* chicken = KindOfMeatCan::getMeatCan("chicken");
@@ -123,6 +151,7 @@ void produce() {
 	cout << endl;
 
 	//原型模式包装罐头
+	cout << "====Pack cans!====" << endl;
 	auto* fruitCanPack = new packConcPrototype("big","fruit");
 	fruitCanPack->display();
 
@@ -137,6 +166,12 @@ void produce() {
 	retypedFruitCanPack->setType("meat");
 	retypedFruitCanPack->display();
 	cout << endl;
+	int i=-1;
+	while (true) {
+		cout << "input 0 to exit:" << endl;
+		cin >> i;
+		if (i == 0)break;
+	}
 }
 
 void finance() {

@@ -182,9 +182,6 @@
     <ClCompile Include="IteratorStatemediator\OrderStateModel.cpp">
       <Filter>IteratorStatemediator</Filter>
     </ClCompile>
-    <ClCompile Include="observe\order.cpp">
-      <Filter>observe</Filter>
-    </ClCompile>
     <ClCompile Include="observe\storehouse.cpp">
       <Filter>observe</Filter>
     </ClCompile>
@@ -226,6 +223,9 @@
     </ClCompile>
     <ClCompile Include="ServiceBoot\src\PowerVertification.cpp">
       <Filter>ServiceBoot\src</Filter>
+    </ClCompile>
+    <ClCompile Include="command\order.cpp">
+      <Filter>command</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

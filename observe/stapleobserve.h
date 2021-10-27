@@ -22,6 +22,7 @@ private:
 };
 
 void OrderSubject::Attach(Observe* addone) {
+	cout << "An observe attached to ordersubject" << endl;
 	_observe_list.push_back(addone);
 }
 

@@ -29,7 +29,7 @@ void Small_Can::show() {
 	pack(can);
 }
 void Small_Can::pack(Can* can) {
-	cout << "(小瓶)" << endl;
+	cout << "(small)" << endl;
 }
 
 //大罐头
@@ -45,7 +45,7 @@ void Big_Can::show() {
 	pack(can);
 }
 void Big_Can::pack(Can* can) {
-	cout << "(大瓶)" << endl;
+	cout << "(big)" << endl;
 }
 
 #endif

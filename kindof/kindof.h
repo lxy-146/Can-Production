@@ -28,7 +28,7 @@ private:
 map<string, KindOfMeatCan*> KindOfMeatCan::types;
 
 void KindOfMeatCan::show() {
-	cout << "这是一个" << type << "罐头" << endl;
+	cout << "This is a " << type << " can" << endl;
 }
 
 string KindOfMeatCan::gettype() {
@@ -46,7 +46,7 @@ KindOfMeatCan* KindOfMeatCan::getMeatCan(const string& type) {
 
 void KindOfMeatCan::printCurrentTypes() {
 	if (!types.empty()) {
-		cout << "肉罐头的种类 = " << types.size() << endl;
+		cout << "The number of kinds of meat can = " << types.size() << endl;
 		for (map<string, KindOfMeatCan*>::iterator iter = types.begin(); iter != types.end(); ++iter) {
 			cout << (*iter).first << endl;
 		}
@@ -72,7 +72,7 @@ private:
 map<string, KindOfFruitCan*> KindOfFruitCan::types;
 
 void KindOfFruitCan::show() {
-	cout << "这是一个" << type << "罐头" << endl;
+	cout << "This is a " << type << " can" << endl;
 }
 
 string KindOfFruitCan::gettype() {
@@ -90,7 +90,7 @@ KindOfFruitCan* KindOfFruitCan::getFruitCan(const string& type) {
 
 void KindOfFruitCan::printCurrentTypes() {
 	if (!types.empty()) {
-		cout << "水果罐头的种类 = " << types.size() << endl;
+		cout << "The number of kinds of fruit can = " << types.size() << endl;
 		for (map<string, KindOfFruitCan*>::iterator iter = types.begin(); iter != types.end(); ++iter) {
 			cout << (*iter).first << endl;
 		}
@@ -116,7 +116,7 @@ private:
 map<string, KindOfVegCan*> KindOfVegCan::types;
 
 void KindOfVegCan::show() {
-	cout << "这是一个" << type << "罐头" << endl;
+	cout << "This is a " << type << " can" << endl;
 }
 
 string KindOfVegCan::gettype() {
@@ -126,7 +126,7 @@ string KindOfVegCan::gettype() {
 void KindOfVegCan::mixed() {//检测是否有肉的成分，再进行输出
 	if (meat == NULL)show();
 	else {
-		cout << "这是一个" << type << "+" << meat->gettype() << "罐头" << endl;
+		cout << "This is a " << type << " and " << meat->gettype() << " can" << endl;
 	}
 }
 
@@ -141,7 +141,7 @@ KindOfVegCan* KindOfVegCan::getVegCan(const string& type, KindOfMeatCan* m) {
 
 void KindOfVegCan::printCurrentTypes() {
 	if (!types.empty()) {
-		cout << "蔬菜罐头的种类 = " << types.size() << endl;
+		cout << "The number of kinds of vegetabel can = " << types.size() << endl;
 		for (map<string, KindOfVegCan*>::iterator iter = types.begin(); iter != types.end(); ++iter) {
 			cout << (*iter).first << endl;
 		}

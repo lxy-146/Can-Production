@@ -177,12 +177,12 @@
     <ClCompile Include="abstractfactoryFactory\factory.cpp" />
     <ClCompile Include="builder\canclass.cpp" />
     <ClCompile Include="builder\grouping_packaging.cpp" />
+    <ClCompile Include="command\order.cpp" />
     <ClCompile Include="FinanceManagement\Finance.cpp" />
     <ClCompile Include="IteratorStatemediator\ConcreteAggregate.cpp" />
     <ClCompile Include="IteratorStatemediator\ConcreteIterator.cpp" />
     <ClCompile Include="IteratorStatemediator\OrderStateModel.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="observe\order.cpp" />
     <ClCompile Include="observe\storehouse.cpp" />
     <ClCompile Include="PersonalManagement\ChainOfResponsibility.cpp" />
     <ClCompile Include="ServiceBoot\src\BlackBoard.cpp" />

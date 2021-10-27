@@ -4,13 +4,11 @@
 FruitStore* FruitStore::fruitstore = nullptr;
 
 FruitStore::~FruitStore() {
-	cout << "fruitstore is dead" << endl;
 }
 
 FruitStore* FruitStore::GetInstance() {
 	if (fruitstore == nullptr) {
 		fruitstore = new FruitStore();
-		cout << "fruitstore is established" << endl;
 	}
 	return fruitstore;
 }
@@ -36,13 +34,11 @@ void FruitStore::decreasenum(int n) {
 MeatStore* MeatStore::meatstore = nullptr;
 
 MeatStore::~MeatStore() {
-	cout << "meatstore is dead" << endl;
 }
 
 MeatStore* MeatStore::GetInstance() {
 	if (meatstore == nullptr) {
 		meatstore = new MeatStore();
-		cout << "meatstore is established" << endl;
 	}
 	return meatstore;
 }
