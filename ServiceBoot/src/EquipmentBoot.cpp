@@ -43,7 +43,6 @@ void EquipmentBoot::EquipmentManagerOn()
 	EquipmentManager::printCurrentTypes();
 
 	// returns pre-existing instance from first 
-	// time Fruit with "Vegetable Processor Manager" was created
 	EquipmentManager::getManager("Vegetable Processor Manager");
 	EquipmentManager::printCurrentTypes();
 	std::cout << std::endl;
@@ -103,12 +102,3 @@ void EquipmentBoot::BlackBoardOn()
 	blockBoard.showBlackBoard();
 	std::cout << std::endl;
 }
-
-//int main()
-//{
-//	EquipmentBoot equipmentBoot;
-//	equipmentBoot.Boot();
-//
-//	system("pause");
-//	return 0;
-//}

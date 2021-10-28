@@ -4,10 +4,10 @@
 std::map<std::string, EquipmentManager*> EquipmentManager::types;
 
 /*
- * Lazy Factory method, gets the Fruit instance associated with a
+ * Lazy Factory method, gets the EquipmentManager instance associated with a
  * certain type. Instantiates new ones as needed.
- * precondition: type. Any string that describes a fruit type, e.g. "apple"
- * postcondition: The Fruit instance associated with that type.
+ * precondition: type. Any string that describes a EquipmentManager type, e.g. "Meat Processor Manager"
+ * postcondition: The EquipmentManager instance associated with that type.
  */
 EquipmentManager* EquipmentManager::getManager(const std::string& type) {
     EquipmentManager*& f = types[type];   // try to find a pre-existing instance, or std::map'll create one if not found
@@ -31,32 +31,3 @@ void EquipmentManager::printCurrentTypes() {
         std::cout << std::endl;
     }
 }
-
-//int main(void) {
-//    EquipmentManager::getManager("Meat Processor Manager");
-//    EquipmentManager::printCurrentTypes();
-//
-//    EquipmentManager::getManager("Vegetable Processor Manager");
-//    EquipmentManager::printCurrentTypes();
-//
-//    // returns pre-existing instance from first 
-//    // time Fruit with "Vegetable Processor Manager" was created
-//    EquipmentManager::getManager("Vegetable Processor Manager");
-//    EquipmentManager::printCurrentTypes();
-//
-//    return 0;
-//}
-
-/*
-Êä³ö£º
-Number of instances made = 1
-Meat Processor Manager
-
-Number of instances made = 2
-Meat Processor Manager
-Vegetable Processor Manager
-
-Number of instances made = 2
-Meat Processor Manager
-Vegetable Processor Manager
-*/
