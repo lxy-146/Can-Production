@@ -17,12 +17,14 @@ protected:
 //肉罐头
 class MeatCan :public Can {
 public:
+	MeatCan(int p,int pt);
 	virtual void show();
 };
 
 //水果罐头
 class FruitCan :public Can {
 public:
+	FruitCan(int p,int pt);
 	virtual void show();
 };
 
