@@ -20,7 +20,7 @@ void flyweight()
     vector<Can*>pool;
     for (int i = 0; i <= 20; i++) {
         Can* f;
-        int temp =1;
+        int temp =(rand() % (4-1+1))+ 1;
         switch (temp) {
         case 1:
             f = factory->GetFlyweights("水果大罐头");
