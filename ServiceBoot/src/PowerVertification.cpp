@@ -53,18 +53,3 @@ void ContextInterpreter::IsFree(const std::string& info)
 		std::cout << info << ",This machine does not exist! ------------ Cannot be resolved" << std::endl;
 	}
 }
-
-
-//*****************************Test************************
-//int main()
-//{
-//	std::shared_ptr<Context> bus = std::make_shared<Context>();
-//	std::vector<std::string> equipments = { "Meat Processor" , "Vegetable Processor" , "Fruit Processor" , "Meat Productor" , "Vegetable Productor" , "Fruit Productor" };
-//	for (std::string equipment : equipments)
-//	{
-//		bus->IsFree(equipment);
-//	}
-//
-//	system("pause");
-//	return 0;
-//}

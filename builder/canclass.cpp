@@ -12,29 +12,48 @@ int can::returnnumber() {
 }
 
 can_large_vegetable::can_large_vegetable() {
-	Can* temp = new FruitCan();
-	temp->setprice(4);
-	cost = temp->getbigprice(); time = 6; number = 1;
+	can_set_adapter* temp = new can_set_adapter(new FruitCan(4, 6));
+	cost = temp->getbigprice(); time = temp->protime(); number = 1;
 	delete temp;
 }
 
 can_small_vegetable::can_small_vegetable() {
-	Can* temp = new FruitCan();
-	temp->setprice(4);
-	cost = temp->getsmallprice(); time = 4; number = 2;
+	can_set_adapter* temp = new can_set_adapter(new FruitCan(4, 4));
+	cost = temp->getsmallprice(); time = temp->protime(); number = 2;
 	delete temp;
 }
 
 can_large_meat::can_large_meat() {
-	Can* temp = new MeatCan();
-	temp->setprice(9);
-	cost = temp->getbigprice(); time = 9; number = 3;
+	can_set_adapter* temp = new can_set_adapter(new MeatCan(9, 9));
+	cost = temp->getbigprice(); time = temp->protime(); number = 3;
 	delete temp;
 }
 
 can_small_meat::can_small_meat() {
-	Can* temp = new MeatCan();
-	temp->setprice(9);
-	cost = temp->getsmallprice(); time = 6; number = 4;
+	can_set_adapter* temp = new can_set_adapter(new MeatCan(9, 6));
+	cost = temp->getsmallprice(); time = temp->protime(); number = 4;
 	delete temp;
+}
+
+can_set_adapter::can_set_adapter() {}
+
+can_set_adapter::can_set_adapter(Can *temp) {
+	tool = temp;
+	delete temp;
+}
+
+double can_set_adapter::getbigprice() {
+	return tool->getbigprice();
+}
+
+double can_set_adapter::getsmallprice() {
+	return tool->getsmallprice();
+}
+
+int can_set_adapter::protime() {
+	return tool->getprotime();
+}
+
+can_set_adapter::~can_set_adapter() {
+	delete tool;
 }

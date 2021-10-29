@@ -31,3 +31,15 @@ class can_small_meat:public can {
 public:
 	can_small_meat();
 };
+
+class can_set_adapter {//适配器模式，strategy模式
+private:
+	Can *tool;
+public:
+	can_set_adapter();
+	can_set_adapter(Can *temp);
+	~can_set_adapter();
+	double getbigprice();
+	double getsmallprice();
+	int protime();
+};

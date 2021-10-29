@@ -14,7 +14,7 @@ private:
     static std::map<std::string, EquipmentManager*> types;
     std::string type;
 
-    // note: constructor private forcing one to use static getFruit()
+    // note: constructor private forcing one to use static getManager()
     EquipmentManager(const std::string& t) : type(t) {}
 };
 

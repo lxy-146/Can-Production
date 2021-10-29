@@ -25,3 +25,13 @@ int Can::getprotime() {
 void FruitCan::show() {
 	cout << "this is a fruit can!";
 }
+
+MeatCan::MeatCan(int p, int pt) {
+	price = p;
+	produce_time = pt;
+}
+
+FruitCan::FruitCan(int p, int pt) {
+	price = p;
+	produce_time = pt;
+}
