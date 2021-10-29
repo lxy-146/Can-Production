@@ -18,7 +18,6 @@ public:
 	void SetOrder(int fnum, int mnum);
 private:
 	list<Observe*> _observe_list;
-	bool _changed = false;
 };
 
 void OrderSubject::Attach(Observe* addone) {
