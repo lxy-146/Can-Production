@@ -148,6 +148,7 @@
     <ClInclude Include="command\command.h" />
     <ClInclude Include="decoration\decoration.h" />
     <ClInclude Include="FinanceManagement\Finance.h" />
+    <ClInclude Include="flyweightbridge\flyweight2.h" />
     <ClInclude Include="inc\can.h" />
     <ClInclude Include="inc\canfactory.h" />
     <ClInclude Include="inc\header.h" />
@@ -178,7 +179,9 @@
     <ClCompile Include="builder\canclass.cpp" />
     <ClCompile Include="builder\grouping_packaging.cpp" />
     <ClCompile Include="command\order.cpp" />
+    <ClCompile Include="decoration\decoration.cpp" />
     <ClCompile Include="FinanceManagement\Finance.cpp" />
+    <ClCompile Include="flyweightbridge\flyweight2.cpp" />
     <ClCompile Include="IteratorStatemediator\ConcreteAggregate.cpp" />
     <ClCompile Include="IteratorStatemediator\ConcreteIterator.cpp" />
     <ClCompile Include="IteratorStatemediator\OrderStateModel.cpp" />

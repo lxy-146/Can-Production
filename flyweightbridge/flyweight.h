@@ -14,7 +14,7 @@ class FishKind : public Kind {
 public:
     void produceKind()
     {
-        cout << "生产鱼中等罐头" << endl;
+        cout <<"生产鱼中等罐头" << endl;
     }
 
 };

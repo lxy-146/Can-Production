@@ -156,6 +156,9 @@
     <ClInclude Include="ServiceBoot\header\PowerVertification.h">
       <Filter>ServiceBoot\header</Filter>
     </ClInclude>
+    <ClInclude Include="flyweightbridge\flyweight2.h">
+      <Filter>flyweightbridge</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -226,6 +229,12 @@
     </ClCompile>
     <ClCompile Include="command\order.cpp">
       <Filter>command</Filter>
+    </ClCompile>
+    <ClCompile Include="flyweightbridge\flyweight2.cpp">
+      <Filter>flyweightbridge</Filter>
+    </ClCompile>
+    <ClCompile Include="decoration\decoration.cpp">
+      <Filter>decoration</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

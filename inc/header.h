@@ -10,6 +10,8 @@ using namespace std;
 #include<string.h>
 #include<typeinfo>
 #include<vector>
+#include<map>
+#include<stdlib.h>
 
 #endif
 #pragma once

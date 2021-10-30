@@ -32,8 +32,8 @@ private:
 //对包装进行处理的命令类
 class PMakeOrder :public Order {
 public:
-	PMakeOrder(Packedge* p):packedge(p){}
+	PMakeOrder(Package* p):package(p){}
 	virtual void execute();
 private:
-	Packedge* packedge;
+	Package* package;
 };

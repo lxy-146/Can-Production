@@ -12,9 +12,9 @@
 * 功能：通过fac的内容返回对应功能的工厂
 */
 AbstractFactory* FactoryProducer::getFactory(string fac) {
-	if (fac == "packedge" || fac == "Packedge" || fac == "PACKEDGE") {
-		cout << "produce packedge factory" << endl;
-		return new PackedgeFactory();
+	if (fac == "package" || fac == "Package" || fac == "PACKAGE") {
+		cout << "produce package factory" << endl;
+		return new PackageFactory();
 	}
 	else if (fac == "kind" || fac == "Kind" || fac == "KIND") {
 		cout << "produce kind factory" << endl;
@@ -22,11 +22,11 @@ AbstractFactory* FactoryProducer::getFactory(string fac) {
 	}
 }
 /*
-* 函数： PackedgeFactory::getPackedge
+* 函数： PackageFactory::getPackage
 * 参数： string a
 * 功能： 通过a的内容返回对应的包装类
 */
-Packedge* PackedgeFactory::getPackedge(string a) {
+Package* PackageFactory::getPackage(string a) {
 	if (a == "Big" || a == "big" || a == "BIG") {
 		cout << "produce big jar factory" << endl;
 		return new BigJar();
@@ -37,11 +37,11 @@ Packedge* PackedgeFactory::getPackedge(string a) {
 	}
 }
 /*
-* 函数：PackedgeFactory::getKind
+* 函数：PackageFactory::getKind
 * 参数：string a
 * 功能：当用户错误调用时返回对应提示
 */
-Kind* PackedgeFactory::getKind(string a) {
+Kind* PackageFactory::getKind(string a) {
 	cout << "i can't do this" << endl;
 	return nullptr;
 }
@@ -61,11 +61,11 @@ Kind* KindFactory::getKind(string a) {
 	}
 }
 /*
-* 函数：KindFactory::getPackedge
+* 函数：KindFactory::getPackage
 * 参数：string a
 * 功能：当用户错误调用时返回对应提示
 */
-Packedge* KindFactory::getPackedge(string a) {
+Package* KindFactory::getPackage(string a) {
 	cout << "i can't do this" << endl;
 	return nullptr;
 }

@@ -45,5 +45,5 @@ void KMakeOrder::execute() {
 * 功能：执行包装的make函数，制造一个对应包装的壳
 */
 void PMakeOrder::execute() {
-	packedge->make();
+	package->make();
 }

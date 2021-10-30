@@ -5,9 +5,9 @@
 #include"header.h"
 
 class AbstractFactory;
-class PackedgeFactory;
+class PackageFactory;
 class KindFactory;
-class Packedge;
+class Package;
 class Kind;
 class FruitIn;
 class MeatIn;
@@ -22,23 +22,23 @@ public:
 //两个工厂的父类，抽象类
 class AbstractFactory {
 public:
-	virtual Packedge* getPackedge(string)=0;
+	virtual Package* getPackage(string)=0;
 	virtual Kind* getKind(string)=0;
 };
 //包装加工厂
-class PackedgeFactory :public AbstractFactory {
+class PackageFactory :public AbstractFactory {
 public:
-	virtual Packedge* getPackedge(string);
+	virtual Package* getPackage(string);
 	virtual Kind* getKind(string);
 };
 //内容物加工厂
 class KindFactory :public AbstractFactory {
 public:
-	virtual Packedge* getPackedge(string);
+	virtual Package* getPackage(string);
 	virtual Kind* getKind(string);
 };
 //包装类，抽象类，大包装和小包装的父类
-class Packedge {
+class Package {
 public:
 	virtual void make() = 0;
 };
@@ -48,12 +48,12 @@ public:
 	virtual void make() = 0;
 };
 //大包装类
-class BigJar:public Packedge {
+class BigJar:public Package {
 public:
 	virtual void make();
 };
 //小包装类
-class LittleJar :public Packedge {
+class LittleJar :public Package {
 public:
 	virtual void make();
 };

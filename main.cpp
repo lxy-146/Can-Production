@@ -3,9 +3,9 @@
 #include"canfactory.h"
 #include"stapleobserve.h"
 #include"prototype.h"
-#include"decoration.h"
 #include"factory.h"
 #include"command.h"
+#include"decoration.h"
 #include"can.h"
 #include"Finance.h"
 #include "ChainOfResponsibility.h"
@@ -18,7 +18,7 @@
 #include"State.h"
 #include"EquipmentBoot.h"
 #include"Context.h"
-#include<stdlib.h>
+#include"flyweight2.h"
 
 void finance();
 void produce();
@@ -28,6 +28,7 @@ void IteratorStateSingeton();
 void jpch();
 void order();
 void statevisitor();
+void flyweight();
 
 void showhome() {
 	system("cls");
@@ -96,15 +97,15 @@ void produce() {
 	//ordersubject->SetOrder(100, 10);
 	cout << endl;
 
-	cout << "====Produce packedge and contents!====" << endl;
+	cout << "====Produce package and contents!====" << endl;
 	FactoryProducer facproducer;//抽象工厂模式，用来生产工厂的类
 	AbstractFactory* kindfactory = facproducer.getFactory("kind");//生产种类工厂
-	AbstractFactory* packedgefactory = facproducer.getFactory("packedge");//生产包装工厂
+	AbstractFactory* packagefactory = facproducer.getFactory("package");//生产包装工厂
 	Kind* kind = kindfactory->getKind("fruit");//工厂模式，生产水果类
-	Packedge* packedge = packedgefactory->getPackedge("big");//生产大包装
+	Package* package = packagefactory->getPackage("big");//生产大包装
 	Broker broker;//命令模式，命令总控器
 	broker.takeorder(new KMakeOrder(kind));//添加生产相关指令
-	broker.takeorder(new PMakeOrder(packedge));//同上
+	broker.takeorder(new PMakeOrder(package));//同上
 	broker.placeorder();//执行所有命令
 	broker.clear();//清除所有命令
 	cout << endl;
@@ -125,6 +126,10 @@ void produce() {
 	Big_Can big_meat_can = Big_Can(meat_can);//生产大型肉罐头
 	small_fruit_can.show();
 	big_meat_can.show();
+
+	cout << endl;
+	cout << "====Produce more cans!====" << endl;
+	flyweight();
 
 	//惰性工厂模式，生产各种类型的罐头
 	//双胞胎（twin）模式，生产组合类型罐头
@@ -407,5 +412,43 @@ void jpch() {
 			break;
 		}
 		else cout << "您输入的指令错误" << endl;
+	}
+}
+
+void flyweight() {
+	Kind* beefkind = new BeefKind();
+	Kind* porkkind = new PorkKind();
+	Kind* fishkind = new FishKind();
+	MiddleCan* middlecan = new MiddleCan(beefkind);
+	middlecan->make();
+	middlecan = new MiddleCan(porkkind);
+	middlecan->make();
+	middlecan = new MiddleCan(fishkind);
+	middlecan->make();
+	Factory* factory = new Factory();
+
+	
+	for (int i = 0; i < 4; i++) {
+		Can* f;
+		switch (i) {
+		case 0:
+			f = factory->GetFlyweights("bigfruit");
+			f->show();
+			break;
+		case 1:
+			f = factory->GetFlyweights("smallfruit");
+			f->show();
+			break;
+		case 2:
+			f = factory->GetFlyweights("bigmeat");
+			f->show();
+			break;
+		case 3:
+			f = factory->GetFlyweights("smallmeat");
+			f->show();
+			break;
+		}
+	
+	
 	}
 }
