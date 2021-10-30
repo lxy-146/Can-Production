@@ -7,7 +7,7 @@
 
 #include "State.h"
 
-class State;
+class State2;
 class Context
 {
 private:
