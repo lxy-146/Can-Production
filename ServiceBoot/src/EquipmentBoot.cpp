@@ -1,7 +1,13 @@
+/*
+* EquipmentBoot.h - Definition
+*/
+
 #include "EquipmentBoot.h"
 
 
-
+/*
+* Function:EquimentÆô¶¯º¯Êý
+*/
 void EquipmentBoot::Boot()
 {
 	std::cout << std::endl;
@@ -20,6 +26,10 @@ void EquipmentBoot::Boot()
 	std::cout << std::endl;
 	std::cout << "=====CAN PRODUCTION BEGIN !====" << std::endl << std::endl;
 }
+
+/*
+* Function:Interpreter Pattern
+*/
 void EquipmentBoot::PowerVertificationOn()
 {
 	std::cout << std::endl;
@@ -32,7 +42,9 @@ void EquipmentBoot::PowerVertificationOn()
 	std::cout << std::endl;
 }
 
-
+/*
+* Function:Lazy Initialization Pattern
+*/
 void EquipmentBoot::EquipmentManagerOn()
 {
 	std::cout << std::endl;
@@ -48,7 +60,9 @@ void EquipmentBoot::EquipmentManagerOn()
 	std::cout << std::endl;
 }
 
-
+/*
+* Function:Facade Pattern
+*/
 void EquipmentBoot::EquipmentOn()
 {
 	Equipment equipment;
@@ -60,7 +74,9 @@ void EquipmentBoot::EquipmentOn()
 
 }
 
-
+/*
+* Function:Adapter Pattern
+*/
 void EquipmentBoot::EquipmentAdapterOn()
 {
 	std::cout << std::endl;
@@ -69,7 +85,9 @@ void EquipmentBoot::EquipmentAdapterOn()
 	std::cout << std::endl;
 }
 
-
+/*
+* Function:Adapter Pattern
+*/
 void EquipmentBoot::EquipmentClassAdapterOn()
 {
 	std::cout << std::endl;
@@ -79,7 +97,9 @@ void EquipmentBoot::EquipmentClassAdapterOn()
 	std::cout << std::endl;
 }
 
-
+/*
+* Function:Adapter Pattern
+*/
 void EquipmentBoot::EquipmentObjectAdapterOn()
 {
 	std::cout << std::endl;
@@ -89,7 +109,9 @@ void EquipmentBoot::EquipmentObjectAdapterOn()
 	std::cout << std::endl;
 }
 
-
+/*
+* Function:BlackBoard Pattern
+*/
 void EquipmentBoot::BlackBoardOn()
 {
 	std::cout << std::endl;

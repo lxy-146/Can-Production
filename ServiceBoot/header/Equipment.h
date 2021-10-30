@@ -2,6 +2,11 @@
 
 #ifndef EQUIPMENT_H
 #define EQUIPMENT_H
+
+/*
+* 实现模式：Facade Pattern
+*/
+
 #include "ConcreteEquipment.h"
 
 class Equipment {

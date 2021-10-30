@@ -1,6 +1,10 @@
 #ifndef EQUIPMENT_BOOT_H
 #define EQUIPMENT_BOOT_H
 
+/*
+* Equipment∆Ù∂Ø¿‡
+*/
+
 #include "PowerVertification.h"
 #include "EquipmentManager.h"
 #include "Equipment.h"

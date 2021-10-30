@@ -1,6 +1,10 @@
 #ifndef EQUIPMENT_CLASS_ADAPTER_H
 #define EQUIPMENT_CLASS_ADAPTER_H
 
+/*
+* 实现模式：Adapter Pattern
+*/
+
 #include "Equipment.h"
 #include "Target.h"
 
@@ -9,7 +13,6 @@
  * all requests get delegated to the Adaptee which defines
  * an existing interface that needs adapting
  */
-
 
  /*
   * Adapter
@@ -20,6 +23,10 @@
 class EquipmentClassAdapter : public Target, private Equipment
 {
 public:
+
+    /*
+    * Function:类适配器接收请求，并通过调用specificRequest()实现对Equipment的适配
+    */
     virtual void request()
     {
         std::cout << "EquipmentClassAdapter is called" << std::endl;

@@ -1,7 +1,9 @@
-
 #ifndef POWER_VERTIFICATION_H
 #define POWER_VERTIFICATION_H
 
+/*
+* 实现模式：Interpreter Pattern
+*/
 
 #include <iostream>
 #include <memory>
@@ -10,7 +12,7 @@
 #include <regex>
 #include <set>
 
-//***********************Interpreter Pattern******************
+
 //抽象表达式类
 class Expression
 {

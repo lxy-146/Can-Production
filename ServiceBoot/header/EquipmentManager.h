@@ -1,6 +1,10 @@
 #ifndef EQUIPMENT_MANAGER_H
 #define EQUIPMENT_MANAGER_H
 
+/*
+* 实现模式：Lazy Initialization Pattern
+*/
+
 #include <iostream>
 #include <string>
 #include <map>

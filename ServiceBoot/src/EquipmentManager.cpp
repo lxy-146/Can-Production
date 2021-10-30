@@ -1,3 +1,7 @@
+/*
+* EquipmentManager.h - Definition
+*/
+
 #include "EquipmentManager.h"
 
 //definition needed for using any static member variable

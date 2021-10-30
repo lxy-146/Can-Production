@@ -3,6 +3,10 @@
 #define BLAKC_BOARD_H
 
 #pragma once
+
+/*
+* 实现模式：Blackboard Pattern
+*/
 #include <map>
 #include <list>
 #include <string>
@@ -27,16 +31,19 @@ public:
 	//设置数据
 	void setValue(std::string key, bool value);
 	void setValue(std::string key, bool value, float expiredTime, bool expiredValue);
-	void setValue(std::string key, int value);
+	/*void setValue(std::string key, int value);
 	void setValue(std::string key, int value, float expiredTime, int expiredValue);
 	void setValue(std::string key, float value);
 	void setValue(std::string key, float value, float expiredTime, float expiredValue);
-	void setValue(std::string key, std::string value);
+	void setValue(std::string key, std::string value);*/
+
 	//访问数据
-	int getInt(std::string key);
+
+	/*int getInt(std::string key);
 	float getFloat(std::string key);
+	std::string getString(std::string key);*/
+
 	bool getBool(std::string key);
-	std::string getString(std::string key);
 
 	void showBlackBoard();
 	std::string parseBool(bool value);

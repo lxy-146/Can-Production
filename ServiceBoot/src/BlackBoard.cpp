@@ -1,3 +1,7 @@
+/*
+* BlackBoard.h - Definition
+*/
+
 
 #include "BlackBoard.h"
 
@@ -9,22 +13,9 @@ BlackBoard::~BlackBoard()
 {
 }
 
-void BlackBoard::setValue(std::string key, int value)
-{
-	mDatas.emplace(key, value);
-}
-
-void BlackBoard::setValue(std::string key, int value, float expiredTime, int expiredValue)
-{}
-
-void BlackBoard::setValue(std::string key, float value)
-{}
-
-void BlackBoard::setValue(std::string key, float value, float expiredTime, float expiredValue)
-{}
-
-void BlackBoard::setValue(std::string key, std::string value)
-{}
+/*
+* Function:在黑板中设置bool值，可添加额外条件
+*/
 
 void BlackBoard::setValue(std::string key, bool value)
 {
@@ -37,33 +28,44 @@ void BlackBoard::setValue(std::string key, bool value, float expiredTime, bool e
 	mTimers.emplace_back(BlackBoardTimer{ expiredTime,key,expiredValue });
 }
 
-
-int BlackBoard::getInt(std::string key)
-{
-	auto& value = mDatas.at(key);
-	return value;
-}
-
-
-float BlackBoard::getFloat(std::string key)
-{
-	auto& value = mDatas.at(key);
-	return value;
-}
-
+/*
+* Function:在黑板中获取bool值
+*/
 bool BlackBoard::getBool(std::string key)
 {
 	auto& value = mDatas.at(key);
 	return value;
 }
 
-std::string BlackBoard::getString(std::string key)
+/*
+* Function:展示黑板中所写的数据
+*/
+void BlackBoard::showBlackBoard()
 {
-	auto& value = mDatas.at(key);
-	std::string s;
-	return s;
+	std::map<std::string, bool> ::iterator iter;
+	iter = mDatas.begin();
+	while (iter != mDatas.end())
+	{
+		std::cout << iter->first << "  :  " << parseBool(getBool(iter->first)) << std::endl;
+		iter++;
+	}
+}
+/*
+* Function:解析黑板中获得的bool值
+*/
+std::string BlackBoard::parseBool(bool value)
+{
+	if (value == true)
+	{
+		return "YES";
+	}
+	else return "NO";
 }
 
+
+/*
+* Function:更新黑板中的数据
+*/
 void BlackBoard::update(float dt)
 {
 	auto itr = mTimers.begin();
@@ -77,24 +79,4 @@ void BlackBoard::update(float dt)
 			++itr;
 		}
 	}
-}
-
-void BlackBoard::showBlackBoard()
-{
-	std::map<std::string, bool> ::iterator iter;
-	iter = mDatas.begin();
-	while (iter != mDatas.end())
-	{
-		std::cout << iter->first << "  :  " << parseBool(getBool(iter->first)) << std::endl;
-		iter++;
-	}
-}
-
-std::string BlackBoard::parseBool(bool value)
-{
-	if (value == true)
-	{
-		return "YES";
-	}
-	else return "NO";
 }
