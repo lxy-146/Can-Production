@@ -3,6 +3,10 @@
 Memento::Memento(string state) {
 	this->state = state;
 }
+Memento::Memento(string state, double fund) {
+	this->state = state;
+	this->fund = fund;
+}
 void Memento::setState(string state) {
 	this->state = state;
 }
@@ -26,7 +30,7 @@ void Originator::printInfo() {
 	cout << "资金总额: " << this->getFund() << endl;
 }
 Memento* Originator::createMemento() {
-	return new Memento(state);
+	return new Memento(state,fund);
 }
 void Originator::restoreMemento(Memento* m) {
 	cout << "账本恢复至上一状态" << endl;

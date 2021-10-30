@@ -204,7 +204,12 @@ void finance() {
 
 	Accountant* acc = new Accountant(org);
 	acc->printInfo();
-
+	int t;
+	while (true) {
+		cout << "ÇëÊäÈë0ÒÔÍË³ö:";
+		cin >> t;
+		if (t == 0)break;
+	}
 }
 
 

@@ -11,6 +11,7 @@ public:
 class Memento {
 public:
 	Memento(string);
+	Memento(string, double);
 	void setState(string);
 	string getState();
 private:
