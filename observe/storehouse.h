@@ -1,49 +1,37 @@
+/*
+* 设计模式：单例模式
+*/
 #ifndef STOREHOUSE_H
 #define STOREHOUSE_H
 
-/// <summary>
-/// 仓库类，用于存放所有的水果、肉类，函数实现放在对应cpp中
-/// </summary>
+//仓库类，用于存放原料
 class Storehouse {
 public:
-	virtual int getnum() = 0;
-	virtual void addnum(int) = 0;
-	virtual void decreasenum(int n) = 0;
-	Storehouse(){}
+	Storehouse() { num = 0; }
+	int getnum();
+	void addnum(int);
+	void decreasenum(int n);
+protected:
+	int num;
 };
-
+//存放水果的仓库
 class FruitStore :public Storehouse {
 public:
-	FruitStore():fruitnum(0) {}
+	FruitStore() {}
 	~FruitStore();
 	static FruitStore* GetInstance();
-	virtual int getnum();
-	virtual void addnum(int n);
-	virtual void decreasenum(int n);
 private:
-	int fruitnum;
 	static FruitStore* fruitstore;
 };
-
+//存放肉的仓库
 class MeatStore :public Storehouse {
 public:
-	MeatStore():meatnum(0){}
+	MeatStore(){}
 	~MeatStore();
 	static MeatStore* GetInstance();
-	virtual int getnum();
-	virtual void addnum(int n);
-	virtual void decreasenum(int n);
+
 private:
-	int meatnum;
 	static MeatStore* meatstore;
-};
-
-class CanStore :public Storehouse {
-public:
-
-private:
-	int fruitcannum;
-	int meatcannum;
 };
 #endif
 #pragma once

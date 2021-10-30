@@ -4,7 +4,6 @@
 #include <map>
 #include <vector>
 #include "flyweight.h"
-#include"can.h"
 using namespace std;
 
 void flyweight()

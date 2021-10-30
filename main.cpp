@@ -109,6 +109,8 @@ void produce() {
 	broker.clear();//清除所有命令
 	cout << endl;
 
+
+
 	//外观模式、解释器模式
 	EquipmentBoot eb;
 	eb.Boot();
