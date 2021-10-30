@@ -8,6 +8,7 @@
 
 /*
 * 函数： FactoryProducer::getFactory
+* 参数： string fac
 * 功能：通过fac的内容返回对应功能的工厂
 */
 AbstractFactory* FactoryProducer::getFactory(string fac) {
@@ -20,7 +21,11 @@ AbstractFactory* FactoryProducer::getFactory(string fac) {
 		return new KindFactory();
 	}
 }
-
+/*
+* 函数： PackedgeFactory::getPackedge
+* 参数： string a
+* 功能： 通过a的内容返回对应的包装类
+*/
 Packedge* PackedgeFactory::getPackedge(string a) {
 	if (a == "Big" || a == "big" || a == "BIG") {
 		cout << "produce big jar factory" << endl;
@@ -31,12 +36,20 @@ Packedge* PackedgeFactory::getPackedge(string a) {
 		return new LittleJar();
 	}
 }
-
+/*
+* 函数：PackedgeFactory::getKind
+* 参数：string a
+* 功能：当用户错误调用时返回对应提示
+*/
 Kind* PackedgeFactory::getKind(string a) {
 	cout << "i can't do this" << endl;
 	return nullptr;
 }
-
+/*
+* 函数：KindFactory::getKind
+* 参数：string a
+* 功能：根据a返回对应正确的种类类，如果a是水果，就返回FruitIn，是肉就返回Meat
+*/
 Kind* KindFactory::getKind(string a) {
 	if (a == "Fruit" || a == "fruit" || a == "FRUIT") {
 		cout << "produce fruit factory" << endl;
@@ -47,24 +60,44 @@ Kind* KindFactory::getKind(string a) {
 		return new MeatIn();
 	}
 }
-
+/*
+* 函数：KindFactory::getPackedge
+* 参数：string a
+* 功能：当用户错误调用时返回对应提示
+*/
 Packedge* KindFactory::getPackedge(string a) {
 	cout << "i can't do this" << endl;
 	return nullptr;
 }
-
+/*
+* 函数：BigJar::make
+* 参数：null
+* 功能：生产一个大罐头壳
+*/
 void BigJar::make() {
 	cout << "produce a big jar" << endl;
 }
-
+/*
+* 函数：LittleJar::make
+* 参数：null
+* 功能：生产一个小罐头壳
+*/
 void LittleJar::make() {
 	cout << "produce a little jar" << endl;
 }
-
+/*
+* 函数：FruitIn::make
+* 参数：null
+* 功能：生产水果
+*/
 void FruitIn::make() {
 	cout << "produce fruit" << endl;
 }
-
+/*
+* 函数：MeatIn::make
+* 参数：null
+* 功能：生产肉
+*/
 void MeatIn::make() {
 	cout << "produce meat" << endl;
 }
