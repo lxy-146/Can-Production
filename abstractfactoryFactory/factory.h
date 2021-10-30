@@ -1,4 +1,7 @@
 #pragma once
+/*
+* 实现模式：抽象工厂模式、工厂模式
+*/
 #include"header.h"
 
 class AbstractFactory;
@@ -10,6 +13,7 @@ class FruitIn;
 class MeatIn;
 class BigJar;
 class LittleJar;
+
 
 class FactoryProducer {
 public:

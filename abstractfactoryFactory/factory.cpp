@@ -1,6 +1,15 @@
+/*
+* factory.h-defination
+*/
+
 #include"header.h"
 #include"factory.h"
 
+
+/*
+* 函数： FactoryProducer::getFactory
+* 功能：通过fac的内容返回对应功能的工厂
+*/
 AbstractFactory* FactoryProducer::getFactory(string fac) {
 	if (fac == "packedge" || fac == "Packedge" || fac == "PACKEDGE") {
 		cout << "produce packedge factory" << endl;
