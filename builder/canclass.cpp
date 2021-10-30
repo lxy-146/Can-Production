@@ -39,7 +39,6 @@ can_set_adapter::can_set_adapter() {}
 
 can_set_adapter::can_set_adapter(Can *temp) {
 	tool = temp;
-	delete temp;
 }
 
 double can_set_adapter::getbigprice() {

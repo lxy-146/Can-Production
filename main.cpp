@@ -391,12 +391,12 @@ void IteratorStateSingeton() {
 }
 
 void jpch() {
-	cout << "请输入指令操作" << endl;
-	cout << "输入1展示建造者模式、组件模式、策略模式组合" << endl;
-	cout << "输入2展示中介者模式" << endl;
-	cout << "输入3展示状态模式、迭代器模式、单例模式组合" << endl;
-	cout << "输入4退出" << endl;
 	while (1) {
+		cout << "请输入指令操作" << endl;
+		cout << "输入1展示建造者模式、组件模式、策略模式组合" << endl;
+		cout << "输入2展示中介者模式" << endl;
+		cout << "输入3展示状态模式、迭代器模式、单例模式组合" << endl;
+		cout << "输入4退出" << endl;
 		int order;
 		cin >> order;
 		if (order == 1) {

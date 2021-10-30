@@ -18,13 +18,22 @@ public:
 	static int test;
 	void showinfo();//控制台显示套餐信息
 	int confirm();//将套餐信息储存到本地
-	void additem(can*item);//为套餐添加罐头,利用了stratgey模式
+	void additem(can*item);//为套餐添加罐头
 	can_group(string name);
 	can_group();
 };
 
 
-
+class default_group {//默认套餐建造类，应用了builder和stragety
+public:
+	default_group(string name) { mygroup = new can_group(name); type = 'A'; }
+	void changetype(char t);
+	can_group* getgroup();
+	void makegroup();
+private:
+	can_group* mygroup;
+	char type;
+};
 
 
 class group_builder {//套餐建造类，此处应用了builder模式和composite模式
