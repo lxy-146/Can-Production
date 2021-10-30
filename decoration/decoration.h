@@ -21,6 +21,7 @@ public:
 	Small_Can(Can* can) :Can_pack(can) {}
 	void show();
 private:
+	//包装成小罐头
 	void pack(Can* can);
 };
 
@@ -31,6 +32,7 @@ public:
 	Big_Can(Can* can) :Can_pack(can) {}
 	void show();
 private:
+	//包装成大罐头
 	void pack(Can* can);
 };
 

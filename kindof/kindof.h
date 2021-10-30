@@ -14,10 +14,10 @@ using namespace std;
 //肉罐头分类
 class KindOfMeatCan :public MeatCan {
 public:
-	virtual void show();
-	static KindOfMeatCan* getMeatCan(const string& type);
+	virtual void show();//显示罐头的种类
+	static KindOfMeatCan* getMeatCan(const string& type);//显示肉罐头的种类
 	static void printCurrentTypes();
-	string gettype();
+	string gettype();//获得罐头的种类
 private:
 	static map<string, KindOfMeatCan*> types;
 	string type;
@@ -58,10 +58,10 @@ void KindOfMeatCan::printCurrentTypes() {
 //水果罐头分类
 class KindOfFruitCan :public FruitCan {
 public:
-	virtual void show();
-	static KindOfFruitCan* getFruitCan(const string& type);
+	virtual void show();//显示罐头的种类
+	static KindOfFruitCan* getFruitCan(const string& type);//显示水果罐头种类
 	static void printCurrentTypes();
-	string gettype();
+	string gettype();//获得水果罐头种类
 private:
 	static map<string, KindOfFruitCan*> types;
 	string type;
@@ -101,11 +101,11 @@ void KindOfFruitCan::printCurrentTypes() {
 //蔬菜罐头分类
 class KindOfVegCan :public VegCan {
 public:
-	virtual void show();
-	static KindOfVegCan* getVegCan(const string& type, KindOfMeatCan* m);
+	virtual void show();//显示蔬菜罐头
+	static KindOfVegCan* getVegCan(const string& type, KindOfMeatCan* m);//不同类型蔬菜罐头
 	static void printCurrentTypes();
-	string gettype();
-	void mixed();
+	string gettype();//得到蔬菜罐头种类
+	void mixed();//混合类型关头
 private:
 	static map<string, KindOfVegCan*> types;
 	string type;
