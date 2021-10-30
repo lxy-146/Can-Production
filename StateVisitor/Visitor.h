@@ -1,3 +1,7 @@
+/*
+  实现模式：参观者模式
+*/
+
 #ifndef CODE_VISITOR_H
 #define CODE_VISITOR_H
 #include"State.h"

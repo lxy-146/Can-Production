@@ -1,3 +1,6 @@
+/*
+  实现模式：状态模式
+*/
 #ifndef CODE_STATE_H
 #define CODE_STATE_H
 #include <string>
