@@ -1,4 +1,7 @@
-#pragma once
+/*
+*实现模式：责任链模式
+*/
+
 #include"header.h"
 
 //请求类

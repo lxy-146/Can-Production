@@ -1,10 +1,13 @@
-#pragma once
+/*
+*实现模式：代理模式、备忘录模式
+*/
+
 #include"header.h"
 
 //代理模式中的Subject类
 class Subject {
 public:
-	virtual void printInfo()=0;
+	virtual void printInfo() = 0;
 };
 
 //备忘录类
@@ -15,12 +18,12 @@ public:
 	void setState(string);
 	string getState();
 private:
-	string state;				
+	string state;
 	double fund;
 };
 
 //备忘录模式中的发起者
-class Originator:public Subject{
+class Originator :public Subject {
 public:
 	Originator(double);
 	void setState(string);
