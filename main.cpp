@@ -336,7 +336,7 @@ void IteratorStateSingeton() {
 		else if (command == 1)
 		{
 			//添加订单到容器
-			aggregate->addOrder(nowDay, count, nowDay);
+			aggregate->addOrder(count, nowDay);
 			count++;//订单数增加
 			//迭代器的参数更新,需要注意起始的订单id变化
 			iterator->SetIterator(id, count);

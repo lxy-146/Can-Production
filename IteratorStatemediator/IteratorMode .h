@@ -55,7 +55,7 @@ public:
         return this->list;
     }
     void InfoUpgrate(int nowDay);//订单的信息更新
-    bool addOrder(int currentDay, int id,int now_day);//添加新的订单
+    bool addOrder(int id,int now_day);//添加新的订单
     int deleteOrder();//删除指定的订单
     Order2 GetOrder(int id);//获取指定的id的订单
     int getSize();//获取长度

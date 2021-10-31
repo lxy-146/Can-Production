@@ -1,7 +1,7 @@
 //具体的订单容器
 #include"IteratorMode .h"
 
-bool ConcreteAggregate::addOrder(int currentDay,int id,int now_day) //添加新的订单(判断是否为空？)
+bool ConcreteAggregate::addOrder(int id,int now_day) //添加新的订单(判断是否为空？)
 {	
 	//订单类的实体order
 	Order2* order = new Order2(new CreationState(),now_day);

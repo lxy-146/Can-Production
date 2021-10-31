@@ -60,3 +60,43 @@ MeatStore* MeatStore::GetInstance() {
 	}
 	return meatstore;
 }
+
+CanStore* CanStore::canstore = nullptr;
+
+CanStore* CanStore::GetInstance() {
+	if (canstore == nullptr) {
+		canstore = new CanStore();
+	}
+	return canstore;
+}
+
+int CanStore::GetLargeFruitCan() {
+	return largefruitcan;
+}
+
+int CanStore::GetSmallFruitCan() {
+	return smallfruitcan;
+}
+
+int CanStore::GetLargeMeatCan() {
+	return largemeatcan;
+}
+
+int CanStore::GetSmallMeatCan() {
+	return smallmeatcan;
+}
+
+void CanStore::AddCan(int largefruitcan, int smallfruitcan, int largemeatcan, int smallmeatcan) {
+	this->largefruitcan += largefruitcan;
+	this->smallfruitcan += smallfruitcan;
+	this->largemeatcan += largemeatcan;
+	this->smallmeatcan += smallmeatcan;
+}
+
+void CanStore::DecreaseCan(int largefruitcan, int smallfruitcan, int largemeatcan, int smallmeatcan) {
+	this->largefruitcan -= largefruitcan;
+	this->smallfruitcan -= smallfruitcan;
+	this->largemeatcan -= largemeatcan;
+	this->smallmeatcan -= smallmeatcan;
+}
+

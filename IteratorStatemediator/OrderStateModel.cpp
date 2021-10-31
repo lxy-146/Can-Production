@@ -20,7 +20,7 @@ int Order2::SumDays() {
 	for (int i = 0; i < number; i++)
 		cin >> store[i];
 	/*store[0] = GetLargeVergetableaNum();
-	store[0] = GetSmallVergetableNum();
+	store[1] = GetSmallVergetableNum();
 	store[2] = GetLargeMeatNum();
 	store[3] = GetSmallMeatNum();*/
 	cout << "信息传输完毕" << endl;
