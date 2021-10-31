@@ -1,3 +1,6 @@
+/*
+* 实现模式：空对象模式、工厂模式
+*/
 #ifndef NULLOBJECT_H
 #define NULLOBJECT_H
 #include<iostream>
@@ -8,10 +11,20 @@ using namespace std;
 class AbstractBuyer
 {
 public:
+	//虚函数，待两类采购商对象继承实现
 	AbstractBuyer() {};
 	virtual ~AbstractBuyer() {};
+	/*
+	* 函数：isNull
+	* 功能：确定采购商是否在我们的清单上
+	*/
 	virtual bool isNull() = 0;
+	/*
+	* 函数：getName
+	* 功能：返回采购商的名称，若不在清单上，返回提示信息
+	*/
 	virtual string getName() = 0;
+	//构造函数、析构函数，判断是否为空的采购商
 
 protected:
 	string name;
@@ -45,10 +58,15 @@ public:
 	~BuyerFactory() {};
 	static string name[4];
 	static AbstractBuyer* getBuyer(string tname);
+	//采购商清单的构造
 };
 
 string BuyerFactory::name[4] = { "WalMart","Carrefour","Hualian","Darunfa" };
 
+/*
+* 函数：BuyerFactory::getBuyer
+* 功能：工厂模式构造若干个采购商，若不在清单上构造为NullBuyer，否则为RealBuyer
+*/
 AbstractBuyer* BuyerFactory::getBuyer(string tname)
 {
 	int i = 0;
@@ -60,6 +78,7 @@ AbstractBuyer* BuyerFactory::getBuyer(string tname)
 		}
 	}
 	return (AbstractBuyer*)new NullBuyer();
+	//使用工厂模式，构造一个采购商清单
 }
 
 #endif

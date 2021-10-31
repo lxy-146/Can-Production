@@ -167,17 +167,18 @@ void produce() {
 	cout << "====Pack cans!====" << endl;
 	auto* fruitCanPack = new packConcPrototype("big","fruit");
 	fruitCanPack->display();
-
+	//对构造的原型进行展示
 	auto* cloneFruitCanPack = fruitCanPack->clone();
 	cloneFruitCanPack->display();
-
+	//拷贝一个原型罐头包装
 	auto* resizedFruitCanPack = fruitCanPack->clone();
 	resizedFruitCanPack->setSize("small");
 	resizedFruitCanPack->display();
-
+	//利用原型模式拷贝，改变大小后包装罐头
 	auto* retypedFruitCanPack = fruitCanPack->clone();
 	retypedFruitCanPack->setType("meat");
 	retypedFruitCanPack->display();
+	//类似地，改变类型后包装罐头
 	cout << endl;
 	int i=-1;
 	while (true) {
