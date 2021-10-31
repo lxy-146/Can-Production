@@ -84,6 +84,12 @@ void statevisitor() {
 		list[i]->accept(rv);
 		c->request();
 	}
+	int r;
+	while (true) {
+		cout << "ÇëÊäÈë0ÒÔÍË³ö£º";
+		cin >> r;
+		if (r == 0)break;
+	}
 }
 
 void produce() {
