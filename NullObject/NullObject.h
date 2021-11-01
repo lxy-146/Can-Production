@@ -74,11 +74,12 @@ AbstractBuyer* BuyerFactory::getBuyer(string tname)
 	{
 		if (name[i] == tname)
 		{
+			//若tname在采购商清单上则返回RealBuyer
 			return (AbstractBuyer*)new RealBuyer(tname);
 		}
 	}
 	return (AbstractBuyer*)new NullBuyer();
-	//使用工厂模式，构造一个采购商清单
+	//使用工厂模式，由采购商清单得到一列采购商
 }
 
 #endif

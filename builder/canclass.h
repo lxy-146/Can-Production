@@ -1,4 +1,7 @@
 #pragma once
+/*
+* 实现模式：适配器模式，策略模式
+*/
 #include"header.h"
 #include"can.h"
 class can {
@@ -9,7 +12,7 @@ protected:
 public:
 	can();
 	double returncost();
-	int returnnumber();
+	int returnnumber();//返回罐头编号
 };
 
 
@@ -41,5 +44,5 @@ public:
 	~can_set_adapter();
 	double getbigprice();
 	double getsmallprice();
-	int protime();
+	int protime();//获取某种罐头的生产周期
 };

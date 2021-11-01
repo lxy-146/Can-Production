@@ -1,3 +1,6 @@
+/*
+* grouping_packaging.h-defination
+*/
 #include"grouping_packaging.h"
 //***********************************can_group类成员函数定义*****************************
 can_group::can_group() {
@@ -14,6 +17,11 @@ can_group::can_group(string name) {
 	price = size = lv = sv = lm = sm = 0;
 }
 
+/*
+* 函数：can_group::showinfo
+* 参数：null
+* 功能：控制台显示套餐信息
+*/
 void can_group::showinfo() {
 	cout << number << "号套餐" << '\t' << name << endl;
 	cout << "价格:" << price << endl;
@@ -22,6 +30,11 @@ void can_group::showinfo() {
 	cout << "大肉罐头数量:" << lm << '\t' << "小肉罐头数量:" << sm << endl;
 }
 
+/*
+* 函数：can_group::additem
+* 参数：can* item
+* 功能：为套餐添加罐头
+*/
 void can_group::additem(can* item) {
 	content.push_back(*item);
 	price += ((item->returncost()) * 1.5);
@@ -45,18 +58,30 @@ void can_group::additem(can* item) {
 	}
 	}
 }
-int can_group::confirm() {
-	return 1;
-}
 //**********************************default_group类成员函数定义*******************************
+/*
+* 函数：default_group::changetype
+* 参数：char t
+* 功能：改变套餐操作类型
+*/
 void default_group::changetype(char t) {
 	if (t == 'A' || t == 'B') type = t;
 }
 
+/*
+* 函数：default_group::getgroup()
+* 参数：null
+* 功能：获取套餐
+*/
 can_group* default_group::getgroup() {
 	return mygroup;
 }
 
+/*
+* 函数：default_group::makegroup
+* 参数：null
+* 功能：根据操作类型创建套餐
+*/
 void default_group::makegroup() {
 	if (type == 'A') {
 		mygroup->additem(new can_large_meat());
@@ -71,6 +96,11 @@ void default_group::makegroup() {
 group_builder::group_builder(){
 }
 
+/*
+* 函数：group_builder::create_group()
+* 参数：null
+* 功能：创建套餐
+*/
 void group_builder::create_group() {
 	cout << "请输入套餐名称:";
 	string _name;
@@ -122,11 +152,15 @@ void group_builder::create_group() {
 		default:break;
 		}
 	}
-	int judge = group.confirm();
-	if (judge == 1) { group_list.push_back(group); cout << "套餐添加成功" << endl; }
-	else cout << "套餐添加失败" << endl;
+	group_list.push_back(group); 
+	cout << "套餐添加成功" << endl;
 }
 
+/*
+* 函数：group_builder::show_all_group
+* 参数：null
+* 功能：显示所有套餐
+*/
 void group_builder::show_all_group() {
 	system("cls");
 	cout << "当前套餐:" << endl;

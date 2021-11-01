@@ -1,8 +1,9 @@
 #pragma once
-//迭代器模式e
-//这个迭代器模式目的是为了迭代所有的订单的状态然后输出
 #include"header.h"
 #include"OrderStateMode.h"
+/*
+* 实现模式：迭代器模式
+*/
 
 //抽象迭代器
 class Iterator

@@ -1,5 +1,7 @@
 #pragma once
-//分装功能
+/*
+* 实现模式：组合模式，建造模式，策略模式，状态模式
+*/
 #include"header.h"
 #include"canclass.h"
 class can_group {//罐头套餐类,此处使用了composite模式
@@ -16,15 +18,14 @@ protected:
 	int sm;//小肉数量
 public:
 	static int test;
-	void showinfo();//控制台显示套餐信息
-	int confirm();//将套餐信息储存到本地
-	void additem(can*item);//为套餐添加罐头
+	void showinfo();
+	void additem(can*item);
 	can_group(string name);
 	can_group();
 };
 
 
-class default_group {//默认套餐建造类，应用了builder和stragety
+class default_group {//默认套餐建造类，应用了builder和stragety和state
 public:
 	default_group(string name) { mygroup = new can_group(name); type = 'A'; }
 	void changetype(char t);
@@ -41,6 +42,6 @@ private:
 	vector<can_group> group_list;//套餐列表
 public:
 	group_builder();
-	void create_group();//创建套餐
-	void show_all_group();//显示所有套餐
+	void create_group();
+	void show_all_group();
 };

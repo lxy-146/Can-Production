@@ -1,6 +1,15 @@
+/*
+* IteratorMode.h - Definition
+*/
+
 //具体的订单容器
 #include"IteratorMode .h"
 
+/*
+   函数：ConcreteAggregate::addOrder
+   参数：int id,int now_day
+   功能：添加对应id的订单以及通过当前时间确定状态
+*/
 bool ConcreteAggregate::addOrder(int id,int now_day) //添加新的订单(判断是否为空？)
 {	
 	//订单类的实体order
@@ -22,6 +31,11 @@ bool ConcreteAggregate::addOrder(int id,int now_day) //添加新的订单(判断是否为空
 	return true;
 }
 
+/*
+   函数：ConcreteAggregate::InfoUpgrate
+   参数：int nowDay
+   功能：通过当前日期，遍历订单更新订单信息
+*/
 void ConcreteAggregate::InfoUpgrate(int nowDay) {
 	for (int i = 0; i < this->getSize(); i++)
 	{//遍历订单更新
@@ -29,6 +43,11 @@ void ConcreteAggregate::InfoUpgrate(int nowDay) {
 		this->list[i].GetState();
 	}
 }
+/*
+   函数：ConcreteAggregate::getSize
+   参数：null
+   功能：获取订单的总数
+*/
 int ConcreteAggregate::getSize() {
 	//获取订单的总数
 	int k = 0;
@@ -39,6 +58,11 @@ int ConcreteAggregate::getSize() {
 	return k;
 }
 
+/*
+   函数：ConcreteAggregate::showHtoT
+   参数：null
+   功能：从头到尾遍历容器输出订单信息
+*/
 void ConcreteAggregate::showHtoT() {
 	if (this->getSize() == 0)
 		cout << "当前还没有订单" << endl;
@@ -53,6 +77,11 @@ void ConcreteAggregate::showHtoT() {
 	}
 }
 
+/*
+   函数：ConcreteAggregate::showTtoH
+   参数：null
+   功能：从尾到头遍历容器输出订单信息
+*/
 void ConcreteAggregate::showTtoH() {
 	if (this->getSize() == 0)
 		cout << "当前还没有订单" << endl;
@@ -68,8 +97,12 @@ void ConcreteAggregate::showTtoH() {
 	}
 }
 
+/*
+   函数：ConcreteAggregate::deleteOrder
+   参数：null
+   功能：删除指定的订单
+*/
 int ConcreteAggregate::deleteOrder() {
-	//删除指定的订单
 	cout << "请输入您希望删除的订单的id" << endl;
 	int id;
 	cin >> id;
@@ -93,11 +126,21 @@ int ConcreteAggregate::deleteOrder() {
 	return false;
 }
 
+/*
+   函数：ConcreteAggregate::createIterator
+   参数：null
+   功能：创建对应的迭代器
+*/
 void ConcreteAggregate::createIterator(ConcreteIterator* i,int start) {
 	i->IniIterator(start, 0,0);
 }
 
-Order2 ConcreteAggregate::GetOrder(int id) {//获取指定的id的订单
+/*
+   函数：ConcreteAggregate::GetOrder
+   参数：int id
+   功能：获取指定的id的订单
+*/
+Order2 ConcreteAggregate::GetOrder(int id) {
 	if (this->getSize() == 0)
 	{
 		cout << "当前还没有订单" << endl;

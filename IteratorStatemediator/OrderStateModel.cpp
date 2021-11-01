@@ -1,28 +1,34 @@
-#include"OrderStateMode.h"
+/*
+* OrderStateMode.h - Definition
+*/
 
-//计算订单执行所需要的时间
-//每个罐头的数量获取通过罐头仓库单例实体的函数得到
+#include"OrderStateMode.h"
+#include"storehouse.h"
+
+/*
+   函数：Order2::SumDays
+   参数：null
+   功能：计算订单执行所需要的时间,每个罐头的数量获取通过罐头仓库单例实体的函数得到
+*/
 int Order2::SumDays() {
 	int number = 4;//所需要的罐头的种类数目
 	int* can = new int[number];
 	int* cost = new int[number];
 	int* store = new int[number];
-	cout << "接下来请输入各种罐头的数量(大菜、小菜、大肉、小肉):" << endl;
+	cout << "接下来请输入各种罐头的数量(大水果、小水果、大肉、小肉):" << endl;
 	for (int i = 0; i < number; i++)
 	{
 		cin >> can[i];
 	}
 	//每种罐头的生产周期
-	//lv\sv\lm\sm
+	//lf\sf\lm\sm
 	cost[0] = 6; cost[1] = 4;
 	cost[2] = 9; cost[3] = 6;
-	cout << "请输入罐头仓库的罐头存储" << endl;
-	for (int i = 0; i < number; i++)
-		cin >> store[i];
-	/*store[0] = GetLargeVergetableaNum();
-	store[1] = GetSmallVergetableNum();
-	store[2] = GetLargeMeatNum();
-	store[3] = GetSmallMeatNum();*/
+	CanStore* sto =CanStore::GetInstance();
+	store[0] = sto->GetLargeFruitCan();
+	store[1] = sto->GetSmallFruitCan();
+	store[2] = sto->GetLargeMeatCan();
+	store[3] = sto->GetSmallMeatCan();
 	cout << "信息传输完毕" << endl;
 	//计算得到每种罐头所需要的时间最大值就是订单的生产周期
 	int temp;
@@ -45,8 +51,13 @@ int Order2::SumDays() {
 	return this->day;
 }
 
+/*
+   函数：Order2::ShowState
+   参数：null
+   功能：输出当前的状态信息
+*/
 void Order2::ShowState() {
-	//输出当前的状态信息
+	
 	if (this->state->stateNum == 0)
 		cout << "第" << this->GetCurrentay() << "天：订单已经创建" << endl;
 

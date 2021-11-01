@@ -1,4 +1,9 @@
 #pragma once
+
+/*
+* 实现模式：状态模式
+*/
+
 #include"header.h"
 #include"canclass.h"//含有每个罐头的生产所需时间
 #include"grouping_packaging.h"//含有套餐的信息，比如需要的罐头数量，

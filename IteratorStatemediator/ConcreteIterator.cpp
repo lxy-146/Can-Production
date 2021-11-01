@@ -1,6 +1,14 @@
+/*
+* IteratorMode.h - Definition
+*/
 //具体的迭代器
 #include"IteratorMode .h"
 
+/*
+   函数：ConcreteIterator::first
+   参数：ConcreteAggregate* list
+   功能：获取容器第一个元素
+*/
 Order2 ConcreteIterator::first(ConcreteAggregate* list) {
 	if (this->count != 0)
 	{//获取第一个
@@ -13,6 +21,11 @@ Order2 ConcreteIterator::first(ConcreteAggregate* list) {
 		cout << "当前还不存在订单" << endl;
 }
 
+/*
+   函数：ConcreteIterator::next
+   参数：ConcreteAggregate* list
+   功能：获取当前指针指向的下一个元素
+*/
 Order2 ConcreteIterator::next(ConcreteAggregate* list) {
 	if (this->count == 0)
 		cout << "当前不存在订单" << endl;
@@ -29,6 +42,11 @@ Order2 ConcreteIterator::next(ConcreteAggregate* list) {
 	}
 }
 
+/*
+   函数：ConcreteIterator::end
+   参数：ConcreteAggregate* list
+   功能：获取容器最后一个元素
+*/
 Order2 ConcreteIterator::end(ConcreteAggregate* list) {
 	if (this->count == 0)
 	{
@@ -42,6 +60,11 @@ Order2 ConcreteIterator::end(ConcreteAggregate* list) {
 	}
 }
 
+/*
+   函数：ConcreteIterator::now
+   参数：ConcreteAggregate* list
+   功能：获取当前指针指向的元素
+*/
 Order2 ConcreteIterator::now(ConcreteAggregate* list) {
 	if (this->count == 0)
 		cout << "当前不存在订单" << endl;
@@ -52,6 +75,11 @@ Order2 ConcreteIterator::now(ConcreteAggregate* list) {
 	}
 }
 
+/*
+   函数：ConcreteIterator::isEmpty
+   参数：ConcreteAggregate* list
+   功能：判断容器是否为空
+*/
 bool ConcreteIterator::isEmpty(ConcreteAggregate* list) {
 	if (this->count == 0)
 		return true;
