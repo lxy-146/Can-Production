@@ -101,3 +101,35 @@ void FruitIn::make() {
 void MeatIn::make() {
 	cout << "produce meat" << endl;
 }
+/*
+* 函数：BigJar::unmake
+* 参数：null
+* 功能：销毁一个大罐头壳
+*/
+void BigJar::unmake() {
+	cout << "distroy a big jar" << endl;
+}
+/*
+* 函数：LittleJar::unmake
+* 参数：null
+* 功能：销毁一个小罐头壳
+*/
+void LittleJar::unmake() {
+	cout << "distroy a little jar" << endl;
+}
+/*
+* 函数：FruitIn::unmake
+* 参数：null
+* 功能：销毁水果
+*/
+void FruitIn::unmake() {
+	cout << "distroy fruit" << endl;
+}
+/*
+* 函数：MeatIn::unmake
+* 参数：null
+* 功能：销毁肉
+*/
+void MeatIn::unmake() {
+	cout << "distroy meat" << endl;
+}

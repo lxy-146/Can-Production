@@ -178,7 +178,7 @@
     <ClCompile Include="abstractfactoryFactory\factory.cpp" />
     <ClCompile Include="builder\canclass.cpp" />
     <ClCompile Include="builder\grouping_packaging.cpp" />
-    <ClCompile Include="command\order.cpp" />
+    <ClCompile Include="command\command.cpp" />
     <ClCompile Include="decoration\decoration.cpp" />
     <ClCompile Include="FinanceManagement\Finance.cpp" />
     <ClCompile Include="flyweightbridge\flyweight2.cpp" />

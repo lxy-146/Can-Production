@@ -24,6 +24,17 @@ void Broker::placeorder() {
 	}
 }
 /*
+* 函数：Broker::undo
+* 参数：null
+* 功能：撤销所有操作
+*/
+void Broker::undo() {
+	for (list<Order*>::reverse_iterator i = orderlist.rbegin(); i != orderlist.rend(); i++)
+	{
+		(*i)->unexecute();
+	}
+}
+/*
 * 函数：Broker::clear
 * 参数：null
 * 功能：将所有在列表中的命令清除
@@ -46,4 +57,20 @@ void KMakeOrder::execute() {
 */
 void PMakeOrder::execute() {
 	package->make();
+}
+/*
+* 函数：PMakeOrder::unexecute
+* 参数：null
+* 功能：执行包装的unmake函数，销毁对应元素
+*/
+void PMakeOrder::unexecute() {
+	package->unmake();
+}
+/*
+* 函数：KMakeOrder::unexecute
+* 参数：null
+* 功能：执行种类的unmake函数，销毁对应元素
+*/
+void KMakeOrder::unexecute() {
+	kind->unmake();
 }

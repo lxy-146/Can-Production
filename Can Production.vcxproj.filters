@@ -227,7 +227,7 @@
     <ClCompile Include="ServiceBoot\src\PowerVertification.cpp">
       <Filter>ServiceBoot\src</Filter>
     </ClCompile>
-    <ClCompile Include="command\order.cpp">
+    <ClCompile Include="command\command.cpp">
       <Filter>command</Filter>
     </ClCompile>
     <ClCompile Include="flyweightbridge\flyweight2.cpp">

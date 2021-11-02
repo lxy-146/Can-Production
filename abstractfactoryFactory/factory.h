@@ -40,30 +40,36 @@ public:
 //包装类，抽象类，大包装和小包装的父类
 class Package {
 public:
+	virtual void unmake() = 0;
 	virtual void make() = 0;
 };
 //种类类，抽象类
 class Kind {
 public:
+	virtual void unmake();
 	virtual void make() = 0;
 };
 //大包装类
 class BigJar:public Package {
 public:
+	virtual void unmake();
 	virtual void make();
 };
 //小包装类
 class LittleJar :public Package {
 public:
+	virtual void unmake();
 	virtual void make();
 };
 //水果类
 class FruitIn :public Kind {
 public:
+	virtual void unmake();
 	virtual void make();
 };
 //肉类
 class MeatIn :public Kind {
 public:
+	virtual void unmake();
 	virtual void make();
 };
