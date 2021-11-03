@@ -11,20 +11,24 @@
 class FishKind :public Kind {
 public:
 	virtual void make();
+	virtual void unmake();
 };
 //生产猪肉罐头
 class PorkKind :public Kind {
 	virtual void make();
+	virtual void unmake();
 };
 //生产牛肉罐头
 class BeefKind :public Kind {
 	virtual void make();
+	virtual void unmake();
 };
 //增加新的尺寸的中型罐头
 class MiddleCan :public Package {
 public:
 	MiddleCan(Kind* k) :kind(k) {}
 	virtual void make();
+	virtual void unmake();
 private:
 	Kind* kind;
 };

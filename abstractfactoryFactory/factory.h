@@ -46,7 +46,7 @@ public:
 //种类类，抽象类
 class Kind {
 public:
-	virtual void unmake();
+	virtual void unmake()=0;
 	virtual void make() = 0;
 };
 //大包装类

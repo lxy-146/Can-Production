@@ -64,6 +64,9 @@
     <Filter Include="ServiceBoot\src">
       <UniqueIdentifier>{0f7dbc30-19f5-4e14-a687-62ea656aeaf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NullObject">
+      <UniqueIdentifier>{519858c7-a918-4c10-8fc4-f1a2f5d9f652}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abstractfactoryFactory\factory.h">
@@ -158,6 +161,9 @@
     </ClInclude>
     <ClInclude Include="flyweightbridge\flyweight2.h">
       <Filter>flyweightbridge</Filter>
+    </ClInclude>
+    <ClInclude Include="NullObject\NullObject.h">
+      <Filter>NullObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
