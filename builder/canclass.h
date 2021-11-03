@@ -34,8 +34,8 @@ class can_small_meat:public can {
 public:
 	can_small_meat();
 };
-
-class can_set_adapter {//适配器模式，strategy模式
+//适配器模式，strategy模式
+class can_set_adapter {
 private:
 	Can *tool;
 public:

@@ -8,6 +8,7 @@
 #include "State.h"
 
 class State2;
+//与状态模式交互的类
 class Context
 {
 private:

@@ -24,8 +24,8 @@ public:
 	can_group();
 };
 
-
-class default_group {//默认套餐建造类，应用了builder和stragety和state
+//默认套餐建造类，应用了builder和stragety和state
+class default_group {
 public:
 	default_group(string name) { mygroup = new can_group(name); type = 'A'; }
 	void changetype(char t);
@@ -36,8 +36,8 @@ private:
 	char type;
 };
 
-
-class group_builder {//套餐建造类，此处应用了builder模式和composite模式
+//套餐建造类，此处应用了builder模式和composite模式
+class group_builder {
 private:
 	vector<can_group> group_list;//套餐列表
 public:

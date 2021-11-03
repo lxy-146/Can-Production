@@ -25,6 +25,7 @@ void Memento::setState(string state) {
 
 /*
 *函数：Memento::getState
+*参数：null
 *功能：返回备忘录状态信息
 */
 string Memento::getState() {
@@ -52,6 +53,7 @@ void Originator::setState(string state) {
 
 /*
 *函数：Originator::getState
+*参数：null
 *功能：返回当前账本状态
 */
 string Originator::getState() {
@@ -60,6 +62,7 @@ string Originator::getState() {
 
 /*
 *函数：Originator::printInfo
+*参数：null
 *功能：打印当前账本信息
 */
 void Originator::printInfo() {
@@ -69,6 +72,7 @@ void Originator::printInfo() {
 
 /*
 *函数：Originator::createMemento
+*参数：null
 *功能：将账本当前状态信息创建为一条备忘
 */
 Memento* Originator::createMemento() {
@@ -88,6 +92,7 @@ void Originator::restoreMemento(Memento* m) {
 
 /*
 *函数：Originator::getFund
+*参数：null
 *功能：返回账本当前的资金总数
 */
 double Originator::getFund() {
@@ -122,6 +127,7 @@ void Caretaker::addMemento(Memento* m) {
 
 /*
 *函数：Caretaker::addMemento
+*参数：null
 *功能：返回备忘录中的最新的一条记录
 */
 Memento* Caretaker::getMemento() {
@@ -141,6 +147,7 @@ Accountant::Accountant(Originator* org) {
 
 /*
 *函数：Accountant::printInfo
+*参数：null
 *功能：代理查询账本当前状态信息
 */
 void Accountant::printInfo() {
@@ -151,6 +158,7 @@ void Accountant::printInfo() {
 
 /*
 *函数：Accountant::preRequest
+*参数：null
 *功能：代理查询预处理
 */
 void Accountant::preRequest() {
@@ -159,6 +167,7 @@ void Accountant::preRequest() {
 
 /*
 *函数：Accountant::postRequest
+*参数：null
 *功能：代理查询后续处理
 */
 void Accountant::postRequest() {

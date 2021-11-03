@@ -19,6 +19,7 @@ Request::Request(int num, string name) {
 
 /*
 *函数：Request::getLevel
+*参数：null
 *功能：返回Request的等级
 */
 int Request::getLevel() {
@@ -28,6 +29,7 @@ int Request::counter = 0;		//初始化请求种类为0
 
 /*
 *函数：Handler::Handler
+*参数：null
 *功能：Handler构造函数
 */
 Handler::Handler() {
@@ -45,6 +47,7 @@ void Handler::setNextHandler(Handler* nextHandler) {
 
 /*
 *函数：Handler::getNextHandler
+*参数：null
 *功能：返回当前Handler的下一级Handler
 */
 Handler* Handler::getNextHandler() {

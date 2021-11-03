@@ -10,6 +10,7 @@
 
 class Context;
 class Visitor;
+//状态类
 class State2
 {
 protected:
@@ -30,7 +31,7 @@ public:
 		return state;
 	}
 };
-
+//未运行状态
 class IdleState : public State2
 {
 public:
@@ -42,7 +43,7 @@ public:
 	};
 	~IdleState() {};
 };
-
+//运行状态
 class RunningState : public State2
 {
 public:
@@ -54,7 +55,7 @@ public:
 	};
 	~RunningState() {};
 };
-
+//损毁状态
 class DamageState : public State2
 {
 public:

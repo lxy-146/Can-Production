@@ -1,4 +1,7 @@
 #pragma once
+/*
+实现模式：享元模式、桥梁模式
+*/
 #include"header.h"
 #include"factory.h"
 #include"decoration.h"
