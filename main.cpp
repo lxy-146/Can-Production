@@ -34,7 +34,30 @@ void nullobject();
 
 void showhome() {
 	system("cls");
-	cout << "==============================================="<<endl;
+	cout << "==========================================================================" << endl;
+	cout << "┏┓       ┏┓┏┓   " << endl;
+	cout << "┃┃┏━┳┳┳━┓┃┗┛┣━┳┳┓   " << endl;
+	cout << "┃┗┫┃┃┃┃┻┫┗┓┏┫┃┃┃┃" << endl;
+	cout << "┗━┻━┻━┻━┛ ┗┛┗━┻━┛                        please choose what to show : "<< endl;
+	cout << "" << endl;
+	cout << "" << endl;
+	cout << "      ******       ******" << endl;
+	cout << "    **********   **********" << endl;
+	cout << "  ************* *************" << endl;
+	cout << " *****************************              1.can-produce  "<< endl;
+	cout << " *****************************              2.order management             " << endl;
+	cout << " *****************************              3.finance management "<< endl;
+	cout << "  ***************************               4.person management" << endl;
+	cout << "    ***********************                 5.equipment management" << endl;
+	cout << "      *******************                   0.exit" << endl;
+	cout << "        ***************" << endl;
+	cout << "          ***********" << endl;
+	cout << "            *******" << endl;
+	cout << "              ***" << endl;
+	cout << "               *" << endl;
+	cout << "==========================================================================" << endl;
+	/*
+	cout << "==============================================="<< endl;
 	cout << "                                              " << endl;
 	cout << " please choose what to show:                  " << endl;
 	cout << "                                              " << endl;
@@ -46,7 +69,7 @@ void showhome() {
 	cout << "                       0.exit                 " << endl;
 	cout << "                                              " << endl;
 	cout << "                                              " << endl;
-	cout << "===============================================" << endl;
+	cout << "===============================================" << endl;*/
 }
 
 int main() {
@@ -72,30 +95,14 @@ int main() {
 	}
 	return 0;
 }
-
-void statevisitor() {
-	State2* list[] = { new IdleState(),new RunningState(),new DamageState() };
-	StateVisitor rv;
-	Context* c = new Context();
-	for (int i = 0; i < 3; i++)
-	{
-		/*
-			不同的State调用自己的accept方法，参数为StateVisitor，对State进行访问，获取当前设备的状态
-			然后由context调用request方法，对当前状态进行处理
-		*/
-		list[i]->accept(rv);
-		c->request();
-	}
-	int r;
-	while (true) {
-		cout << "请输入0以退出：";
-		cin >> r;
-		if (r == 0)break;
-	}
+void sleep() {
+	Sleep(2000);
 }
 
+//罐头生产
 void produce() {
-	cout << "====Take order:10 fruit,100 meat!====" << endl;
+	cout << endl;
+	cout << "=====Take order:10 fruit,100 meat!=====" << endl;
 	OrderSubject* ordersubject = new OrderSubject();//创建一个与observe有关的subject类用来对observe进行控制
 	Observe* fruitobserve = new FruitObserve();//水果方面的observe，与subject进行连接
 	Observe* meatobserve = new MeatObserve();//肉方面的observe，与subject进行连接
@@ -103,9 +110,9 @@ void produce() {
 	ordersubject->Attach(meatobserve);//将肉observe进行连接
 	ordersubject->SetOrder(10, 100);//创建一个订单：购买10个水果，100个肉
 	//ordersubject->SetOrder(100, 10);
-	cout << endl;
-
-	cout << "====Produce package and contents!====" << endl;
+	cout <<"=======================================\n" << endl;
+	sleep();
+	cout << "=====Produce package and contents!=====" << endl;
 	FactoryProducer facproducer;//抽象工厂模式，用来生产工厂的类
 	AbstractFactory* kindfactory = facproducer.getFactory("kind");//生产种类工厂
 	AbstractFactory* packagefactory = facproducer.getFactory("package");//生产包装工厂
@@ -116,33 +123,33 @@ void produce() {
 	broker.takeorder(new PMakeOrder(package));//同上
 	broker.placeorder();//执行所有命令
 	broker.clear();//清除所有命令
-	cout << endl;
-
+	cout << "=======================================\n" << endl;
+	sleep();
 
 
 	//外观模式、解释器模式
 	EquipmentBoot eb;
 	eb.Boot();
-
+	sleep();
 	//装饰者模式
 	cout << endl;
-	cout << "====Assemble cans!====" << endl;
+	cout << "=====Assemble cans!=====" << endl;
 	Can* fruit_can = new FruitCan();//实例化一个蔬菜罐头
 	Can* meat_can = new MeatCan();//实例化一个肉罐头
-
 	Small_Can small_fruit_can = Small_Can(fruit_can);//生产小型蔬菜罐头
 	Big_Can big_meat_can = Big_Can(meat_can);//生产大型肉罐头
 	small_fruit_can.show();
 	big_meat_can.show();
+	cout << "=======================================\n" << endl;
+	sleep();
 
-	cout << endl;
-	cout << "====Produce more cans!====" << endl;
+	cout << "=====Produce more cans!=====" << endl;
 	flyweight();
-
+	cout << "=======================================\n" << endl;
+	sleep();
 	//惰性工厂模式，生产各种类型的罐头
 	//双胞胎（twin）模式，生产组合类型罐头
-	cout << endl;
-	cout << "====Produce combined cans!====" << endl;
+	cout << "=====Produce combined cans!=====" << endl;
 	KindOfMeatCan::getMeatCan("Pork");
 	KindOfMeatCan* beefcan = KindOfMeatCan::getMeatCan("beef");
 	KindOfMeatCan* chicken = KindOfMeatCan::getMeatCan("chicken");
@@ -163,10 +170,10 @@ void produce() {
 	bamboo_beef->mixed();
 	carrot_chicken->mixed();
 	cucumber->mixed();
-	cout << endl;
-
+	cout << "=======================================\n" << endl;
+	sleep();
 	//原型模式包装罐头
-	cout << "====Pack cans!====" << endl;
+	cout << "=====Pack cans!=====" << endl;
 	auto* fruitCanPack = new packConcPrototype("big","fruit");
 	fruitCanPack->display();
 	//对构造的原型进行展示
@@ -180,9 +187,14 @@ void produce() {
 	auto* retypedFruitCanPack = fruitCanPack->clone();
 	retypedFruitCanPack->setType("meat");
 	retypedFruitCanPack->display();
-	nullobject();
+	cout << "=======================================\n" << endl;
 	//类似地，改变类型后包装罐头
-	cout << endl;
+	sleep();
+	//空对象模式对订单操作
+	cout <<"=====Finding Buyer=====" << endl;
+	nullobject();
+	cout << "=======================================\n" << endl;
+	sleep();
 	int i=-1;
 	while (true) {
 		cout << "input 0 to exit:" << endl;
@@ -190,113 +202,74 @@ void produce() {
 		if (i == 0)break;
 	}
 }
-
-void finance() {
-	Originator* org = new Originator(150000);
-	Caretaker* crt = new Caretaker();
-	crt->addMemento(org->createMemento());
-	org->setState("2021.11.4");                   //更新账本状态为2021.11.4
-	org->printInfo();
-
-	crt->addMemento(org->createMemento());
-	org->setState("2021.11.5");
-	org->printInfo();
-
-	crt->addMemento(org->createMemento());
-	org->setState("2021.11.6");
-	org->printInfo();
-
-	org->restoreMemento(crt->getMemento());        //恢复至上一条记录
-	org->restoreMemento(crt->getMemento());        //再恢复一次
-
-	org->setFund(1, 50000);                        //资金+50000
-	org->printInfo();                              //显示当前账本状态信息和资金总数
-
-	Accountant* acc = new Accountant(org);
-	acc->printInfo();
-	int t;
-	while (true) {
-		cout << "请输入0以退出:";
-		cin >> t;
-		if (t == 0)break;
-	}
-}
+//享元
+void flyweight() {
+	Kind* beefkind = new BeefKind();
+	Kind* porkkind = new PorkKind();
+	Kind* fishkind = new FishKind();
+	MiddleCan* middlecan = new MiddleCan(beefkind);
+	middlecan->make();
+	middlecan = new MiddleCan(porkkind);
+	middlecan->make();
+	middlecan = new MiddleCan(fishkind);
+	middlecan->make();
+	Factory* factory = new Factory();
 
 
-
-void personnelmanagement() {
-
-	//构建责任链
-	Handler* leader = new Leader;
-	Handler* manager = new Manager;
-	Handler* boss = new Boss;
-
-	leader->setNextHandler(manager);
-	manager->setNextHandler(boss);
-	boss->setNextHandler(nullptr);
-
-	//创建请求
-	Request* request1 = new Request(1, "请短假");
-	Request* request2 = new Request(4, "请长假");
-	Request* request3 = new Request(3, "申请加薪");
-	Request* request4 = new Request(6, "申请升职");
-	Request* request5 = new Request(7, "离职");
-	cout << "0.退出" << endl;
-	//处理请求
-	cout << "请选择请求类型: ";
-	int num = 1;
-	while (cin >> num) {
-		if (num == 0) {
+	for (int i = 0; i < 4; i++) {
+		Can* f;
+		switch (i) {
+		case 0:
+			f = factory->GetFlyweights("bigfruit");
+			f->show();
+			break;
+		case 1:
+			f = factory->GetFlyweights("smallfruit");
+			f->show();
+			break;
+		case 2:
+			f = factory->GetFlyweights("bigmeat");
+			f->show();
+			break;
+		case 3:
+			f = factory->GetFlyweights("smallmeat");
+			f->show();
 			break;
 		}
-		else if (num > 0 && num < 6) {
-			switch (num) {
-			case 1: leader->handleRequest(request1->getLevel()); break;
-			case 2: leader->handleRequest(request2->getLevel()); break;
-			case 3: leader->handleRequest(request3->getLevel()); break;
-			case 4: leader->handleRequest(request4->getLevel()); break;
-			case 5: leader->handleRequest(request5->getLevel()); break;
-			}
-		}
-		else {
-			cout << "不存在该类请求！" << endl;
-		}
-		cout << "请选择请求类型：";
-	}
 
-}
-
-
-
-void jpFunction() {
-	int a;
-	group_builder* builder = new group_builder();
-	while (1) {
-		builder->show_all_group();
-		builder->create_group();
-		cout << "输入0以结束此功能" << endl;
-		cout << "输入1以继续添加套餐" << endl;
-		cin >> a;
-		if (a == 0)
-			break;
-		else if (a == 1)
-			;
-		else
-		{
-			cout << "输入的指令错误请重新输入" << endl;
-			system("pause");
-		}
 
 	}
-	delete builder;
+}
+//空对象
+void nullobject()
+{
+	AbstractBuyer* b1 = BuyerFactory::getBuyer("WalMart");
+	AbstractBuyer* b2 = BuyerFactory::getBuyer("Carrefour");
+	AbstractBuyer* b3 = BuyerFactory::getBuyer("Hualian");
+	AbstractBuyer* b4 = BuyerFactory::getBuyer("Darunfa");
+	AbstractBuyer* b5 = BuyerFactory::getBuyer("Wumei");
+	//创建采购商
+	cout << "WalMart: " << b1->getName() << endl;
+	cout << "Carrefour: " << b2->getName() << endl;
+	cout << "Hualian: " << b3->getName() << endl;
+	cout << "Darunfa: " << b4->getName() << endl;
+	cout << "Wumei: " << b5->getName() << endl;
+	//使用采购商对象中函数getName来确定是否在清单上
+	delete b1; b1 = NULL;
+	delete b2; b2 = NULL;
+	delete b3; b3 = NULL;
+	delete b4; b4 = NULL;
+	delete b5; b5 = NULL;
+	//安全删除所有指针
 }
 
+//订单购买
 void order() {
 	mediator();
 	IteratorStateSingeton();
 	jpch();
 }
-
+//中介者
 void mediator() {//简单的中介者
 	ConcreteMediator* p = new ConcreteMediator();
 	Colleague* pCol1 = new ConcreteColleague_0(p);
@@ -308,7 +281,6 @@ void mediator() {//简单的中介者
 	delete pCol2;
 	delete p;
 }
-
 //迭代器+状态+单例模式
 void IteratorStateSingeton() {
 	//创建迭代器和容器
@@ -404,7 +376,30 @@ void IteratorStateSingeton() {
 	}
 	delete list;
 }
+//建造者
+void builder() {
+	int a;
+	group_builder* builder = new group_builder();
+	while (1) {
+		builder->show_all_group();
+		builder->create_group();
+		cout << "输入0以结束此功能" << endl;
+		cout << "输入1以继续添加套餐" << endl;
+		cin >> a;
+		if (a == 0)
+			break;
+		else if (a == 1)
+			;
+		else
+		{
+			cout << "输入的指令错误请重新输入" << endl;
+			system("pause");
+		}
 
+	}
+	delete builder;
+}
+//jpch模式展示部分
 void jpch() {
 	while (1) {
 		cout << "请输入指令操作" << endl;
@@ -415,7 +410,7 @@ void jpch() {
 		int order;
 		cin >> order;
 		if (order == 1) {
-			jpFunction();
+			builder();
 		}
 		else if (order == 2) {
 			mediator();
@@ -430,63 +425,104 @@ void jpch() {
 	}
 }
 
-void flyweight() {
-	Kind* beefkind = new BeefKind();
-	Kind* porkkind = new PorkKind();
-	Kind* fishkind = new FishKind();
-	MiddleCan* middlecan = new MiddleCan(beefkind);
-	middlecan->make();
-	middlecan = new MiddleCan(porkkind);
-	middlecan->make();
-	middlecan = new MiddleCan(fishkind);
-	middlecan->make();
-	Factory* factory = new Factory();
+//人员管理
+void personnelmanagement() {
 
-	
-	for (int i = 0; i < 4; i++) {
-		Can* f;
-		switch (i) {
-		case 0:
-			f = factory->GetFlyweights("bigfruit");
-			f->show();
-			break;
-		case 1:
-			f = factory->GetFlyweights("smallfruit");
-			f->show();
-			break;
-		case 2:
-			f = factory->GetFlyweights("bigmeat");
-			f->show();
-			break;
-		case 3:
-			f = factory->GetFlyweights("smallmeat");
-			f->show();
+	//构建责任链
+	Handler* leader = new Leader;
+	Handler* manager = new Manager;
+	Handler* boss = new Boss;
+
+	leader->setNextHandler(manager);
+	manager->setNextHandler(boss);
+	boss->setNextHandler(nullptr);
+
+	//创建请求
+	Request* request1 = new Request(1, "请短假");
+	Request* request2 = new Request(4, "请长假");
+	Request* request3 = new Request(3, "申请加薪");
+	Request* request4 = new Request(6, "申请升职");
+	Request* request5 = new Request(7, "离职");
+	cout << "0.退出" << endl;
+	//处理请求
+	cout << "请选择请求类型: ";
+	int num = 1;
+	while (cin >> num) {
+		if (num == 0) {
 			break;
 		}
-	
-	
+		else if (num > 0 && num < 6) {
+			switch (num) {
+			case 1: leader->handleRequest(request1->getLevel()); break;
+			case 2: leader->handleRequest(request2->getLevel()); break;
+			case 3: leader->handleRequest(request3->getLevel()); break;
+			case 4: leader->handleRequest(request4->getLevel()); break;
+			case 5: leader->handleRequest(request5->getLevel()); break;
+			}
+		}
+		else {
+			cout << "不存在该类请求！" << endl;
+		}
+		cout << "请选择请求类型：";
+	}
+
+}
+
+//财务管理
+void finance() {
+	Originator* org = new Originator(150000);
+	Caretaker* crt = new Caretaker();
+	crt->addMemento(org->createMemento());
+	org->setState("2021.11.4");                   //更新账本状态为2021.11.4
+	org->printInfo();
+
+	crt->addMemento(org->createMemento());
+	org->setState("2021.11.5");
+	org->printInfo();
+
+	crt->addMemento(org->createMemento());
+	org->setState("2021.11.6");
+	org->printInfo();
+
+	org->restoreMemento(crt->getMemento());        //恢复至上一条记录
+	org->restoreMemento(crt->getMemento());        //再恢复一次
+
+	org->setFund(1, 50000);                        //资金+50000
+	org->printInfo();                              //显示当前账本状态信息和资金总数
+
+	Accountant* acc = new Accountant(org);
+	acc->printInfo();
+	int t;
+	while (true) {
+		cout << "请输入0以退出:";
+		cin >> t;
+		if (t == 0)break;
 	}
 }
 
-void nullobject()
-{
-	AbstractBuyer* b1 = BuyerFactory::getBuyer("WalMart");
-	AbstractBuyer* b2 = BuyerFactory::getBuyer("Carrefour");
-	AbstractBuyer* b3 = BuyerFactory::getBuyer("Hualian");
-	AbstractBuyer* b4 = BuyerFactory::getBuyer("Darunfa");
-	AbstractBuyer* b5 = BuyerFactory::getBuyer("Wumei");
-	//创建采购商
-	cout << "WalMart: " << b1->getName() << endl;
-	cout << "Carrefour: " << b2->getName() << endl;
-	cout << "Hualian: " << b3->getName() << endl;
-	cout << "Darunfa: " << b4->getName() << endl;
-	cout << "Wumei: " << b5->getName() << endl;
-	//使用采购商对象中函数getName来确定是否在清单上
-	delete b1; b1 = NULL;
-	delete b2; b2 = NULL;
-	delete b3; b3 = NULL;
-	delete b4; b4 = NULL;
-	delete b5; b5 = NULL;
-	//安全删除所有指针
-	cout << endl;
+//设备管理
+void statevisitor() {
+	State2* list[] = { new IdleState(),new RunningState(),new DamageState() };
+	StateVisitor rv;
+	Context* c = new Context();
+	for (int i = 0; i < 3; i++)
+	{
+		/*
+			不同的State调用自己的accept方法，参数为StateVisitor，对State进行访问，获取当前设备的状态
+			然后由context调用request方法，对当前状态进行处理
+		*/
+		list[i]->accept(rv);
+		c->request();
+	}
+	int r;
+	while (true) {
+		cout << "请输入0以退出：";
+		cin >> r;
+		if (r == 0)break;
+	}
 }
+
+
+
+
+
