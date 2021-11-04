@@ -11,10 +11,9 @@ using namespace std;
    参数：IdleState& idle
    功能：访问Idle状态
 */
-void StateVisitor::visit(IdleState& idle)
+void StateVisitor::visit(IdleState &idle)
 {
-	cout << "\nNow in visit method." << endl;
-	cout << "The device state is " << idle.getState() << ".  Don't need repair." << endl;
+	cout << "\nStateVisitor : visit(IdleState& idle) : The device state is " << idle.getState() << ".  Don't need repair." << endl;
 }
 
 /*
@@ -22,10 +21,9 @@ void StateVisitor::visit(IdleState& idle)
    参数：RunningState& running
    功能：访问Running状态
 */
-void StateVisitor::visit(RunningState& running)
+void StateVisitor::visit(RunningState &running)
 {
-	cout << "\nNow in visit method." << endl;
-	cout << "The device state is " << running.getState() << ".  Running it." << endl;
+	cout << "\nStateVisitor : visit(RunningState &running) : The device state is " << running.getState() << ".  Running it." << endl;
 }
 
 /*
@@ -33,8 +31,7 @@ void StateVisitor::visit(RunningState& running)
    参数：DamageState& damage
    功能：访问Damage状态
 */
-void StateVisitor::visit(DamageState& damage)
+void StateVisitor::visit(DamageState &damage)
 {
-	cout << "\nNow in visit method." << endl;
-	cout << "The device state is " << damage.getState() << ".  Repairing it." << endl;
+	cout << "\nStateVisitor : visit(DamageState &damage) : The device state is " << damage.getState() << ".  Repairing it." << endl;
 }
