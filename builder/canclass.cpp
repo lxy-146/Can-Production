@@ -28,6 +28,7 @@ int can::returnnumber() {
 
 can_large_vegetable::can_large_vegetable() {
 	can_set_adapter* temp = new can_set_adapter(new FruitCan(4, 6));
+
 	cost = temp->getbigprice(); time = temp->protime(); number = 1;
 	delete temp;
 }
@@ -53,6 +54,7 @@ can_small_meat::can_small_meat() {
 can_set_adapter::can_set_adapter() {}
 
 can_set_adapter::can_set_adapter(Can *temp) {
+	cout << "can_set_adapter:can_set_adapter:适配器模式，将can类型转换为canclass类型" << endl;
 	tool = temp;
 }
 

@@ -2,6 +2,7 @@
 * grouping_packaging.h-defination
 */
 #include"grouping_packaging.h"
+
 //***********************************can_group类成员函数定义*****************************
 can_group::can_group() {
 	name = "";
@@ -36,6 +37,7 @@ void can_group::showinfo() {
 * 功能：为套餐添加罐头
 */
 void can_group::additem(can* item) {
+	cout << "can_group:additem:策略模式根据指针指向的对象类型调用相同函数，产生不同结果" << endl;
 	content.push_back(*item);
 	price += ((item->returncost()) * 1.5);
 	size++;
@@ -109,6 +111,7 @@ void group_builder::create_group() {
 	cout << "请输入是否使用默认套餐（若使用请输入套餐序号（A/B），若不使用请输入除AB外任意字符）：";
 	cin >> _a;
 	can_group group(_name);
+	cout << "group_builder:create_group:建造者模式利用建造者创建新的套餐类实例" << endl;
 	default_group dgroup(_name);
 	if (_a == 'A') {
 		dgroup.changetype('A');
@@ -149,7 +152,7 @@ void group_builder::create_group() {
 			cout << "小肉罐头添加成功" << endl;
 			break;
 		}
-		default:break;
+		default:cout << "请输入正确的值："; break;
 		}
 	}
 	group_list.push_back(group); 

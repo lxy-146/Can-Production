@@ -264,11 +264,6 @@ void nullobject()
 }
 
 //订单购买
-void order() {
-	mediator();
-	IteratorStateSingeton();
-	jpch();
-}
 //中介者
 void mediator() {//简单的中介者
 	ConcreteMediator* p = new ConcreteMediator();
@@ -400,7 +395,7 @@ void builder() {
 	delete builder;
 }
 //jpch模式展示部分
-void jpch() {
+void order() {
 	while (1) {
 		cout << "请输入指令操作" << endl;
 		cout << "输入1展示建造者模式、组件模式、策略模式组合" << endl;
