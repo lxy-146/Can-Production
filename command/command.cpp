@@ -9,7 +9,7 @@
 * 功能：将order加入到命令列表中
 */
 void Broker::takeorder(Order* order){
-	cout << "command pattern add an order" << endl;
+	cout << "Broker:takeorder:command pattern add an order" << endl;
 	orderlist.push_back(order);
 }
 /*
@@ -18,6 +18,7 @@ void Broker::takeorder(Order* order){
 * 功能：执行所有的order
 */
 void Broker::placeorder() {
+	cout << "Broker:placeorder:execute all order" << endl;
 	for (auto i : orderlist)
 	{
 		i->execute();

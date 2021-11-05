@@ -39,7 +39,7 @@ public:
 * 功能：将一个观察者连接到操作器上
 */
 void OrderSubject::Attach(Observe* addone) {
-	cout << "An observe attached to ordersubject" << endl;
+	cout << "OrderSubject:Attach:An observe attached to ordersubject" << endl;
 	_observe_list.push_back(addone);
 }
 /*
@@ -75,6 +75,7 @@ void OrderSubject::SetOrder(int fnum, int mnum) {
 */
 void FruitObserve::update(stapleorder* order) {
 	Storehouse* storehouse = FruitStore::GetInstance();
+	cout << "FruitObserve:update:fruitobserve updated" << endl;
 	storehouse->addnum(order->GetFruitnum());
 }
 /*
@@ -84,6 +85,7 @@ void FruitObserve::update(stapleorder* order) {
 */
 void MeatObserve::update(stapleorder* order) {
 	Storehouse* storehouse = MeatStore::GetInstance();
+	cout << "MeatObserve:update:meatobserve updated" << endl;
 	storehouse->addnum(order->GetMeatnum());
 }
 #endif // !STAPLEOBSERVE_H

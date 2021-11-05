@@ -13,11 +13,11 @@
 */
 AbstractFactory* FactoryProducer::getFactory(string fac) {
 	if (fac == "package" || fac == "Package" || fac == "PACKAGE") {
-		cout << "produce package factory" << endl;
+		cout << "FactoryProducer:getFactory:produce package factory" << endl;
 		return new PackageFactory();
 	}
 	else if (fac == "kind" || fac == "Kind" || fac == "KIND") {
-		cout << "produce kind factory" << endl;
+		cout << "FactoryProducer:getFactory:produce kind factory" << endl;
 		return new KindFactory();
 	}
 }
@@ -28,11 +28,11 @@ AbstractFactory* FactoryProducer::getFactory(string fac) {
 */
 Package* PackageFactory::getPackage(string a) {
 	if (a == "Big" || a == "big" || a == "BIG") {
-		cout << "produce big jar factory" << endl;
+		cout << "PackageFactory:getPackage:produce big jar object" << endl;
 		return new BigJar();
 	}
 	else if (a == "Little" || a == "little" || a == "LITTLE") {
-		cout << "produce small jar factory" << endl;
+		cout << "PackageFactory:getPackage:produce small jar object" << endl;
 		return new LittleJar();
 	}
 }
@@ -52,11 +52,11 @@ Kind* PackageFactory::getKind(string a) {
 */
 Kind* KindFactory::getKind(string a) {
 	if (a == "Fruit" || a == "fruit" || a == "FRUIT") {
-		cout << "produce fruit factory" << endl;
+		cout << "KindFactory:getKind:produce fruit object" << endl;
 		return new FruitIn();
 	}
 	else if (a == "Meat" || a == "meat" || a == "MEAT") {
-		cout << "produce meat factory" << endl;
+		cout << "KindFactory:getKind:produce meat object" << endl;
 		return new MeatIn();
 	}
 }
@@ -75,7 +75,7 @@ Package* KindFactory::getPackage(string a) {
 * 功能：生产一个大罐头壳
 */
 void BigJar::make() {
-	cout << "produce a big jar" << endl;
+	cout << "BigJar:make:produce a big jar" << endl;
 }
 /*
 * 函数：LittleJar::make
@@ -83,7 +83,7 @@ void BigJar::make() {
 * 功能：生产一个小罐头壳
 */
 void LittleJar::make() {
-	cout << "produce a little jar" << endl;
+	cout << "LittleJar:make:produce a little jar" << endl;
 }
 /*
 * 函数：FruitIn::make
@@ -91,7 +91,7 @@ void LittleJar::make() {
 * 功能：生产水果
 */
 void FruitIn::make() {
-	cout << "produce fruit" << endl;
+	cout << "FruitIn:make:produce fruit" << endl;
 }
 /*
 * 函数：MeatIn::make
@@ -99,7 +99,7 @@ void FruitIn::make() {
 * 功能：生产肉
 */
 void MeatIn::make() {
-	cout << "produce meat" << endl;
+	cout << "MeatIn:make:produce meat" << endl;
 }
 /*
 * 函数：BigJar::unmake

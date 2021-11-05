@@ -55,11 +55,11 @@ void EquipmentBoot::EquipmentManagerOn()
 	EquipmentManager::getManager("Meat Processor Manager");
 	EquipmentManager::printCurrentTypes();
 
-	EquipmentManager::getManager("Vegetable Processor Manager");
+	EquipmentManager::getManager("Fruit Processor Manager");
 	EquipmentManager::printCurrentTypes();
 
 	// returns pre-existing instance from first 
-	EquipmentManager::getManager("Vegetable Processor Manager");
+	EquipmentManager::getManager("Fruit Processor Manager");
 	EquipmentManager::printCurrentTypes();
 	std::cout << std::endl;
 }

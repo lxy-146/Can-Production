@@ -101,6 +101,7 @@ void sleep() {
 
 //罐头生产
 void produce() {
+	//单例模式、观察者模式
 	cout << endl;
 	cout << "=====Take order:10 fruit,100 meat!=====" << endl;
 	OrderSubject* ordersubject = new OrderSubject();//创建一个与observe有关的subject类用来对observe进行控制
@@ -112,6 +113,9 @@ void produce() {
 	//ordersubject->SetOrder(100, 10);
 	cout <<"=======================================\n" << endl;
 	sleep();
+
+
+	//抽象工厂模式、工厂模式、命令模式
 	cout << "=====Produce package and contents!=====" << endl;
 	FactoryProducer facproducer;//抽象工厂模式，用来生产工厂的类
 	AbstractFactory* kindfactory = facproducer.getFactory("kind");//生产种类工厂

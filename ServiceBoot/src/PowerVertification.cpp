@@ -50,7 +50,7 @@ bool AndExpression::Interpret(const std::string& info)
 ContextInterpreter::ContextInterpreter()
 {
 	cans.push_back("Meat");
-	cans.push_back("Vegetable");
+	cans.push_back("Fruit");
 	equipments.push_back("Processor");
 	equipments.push_back("Productor");
 	smartAndExpr = std::make_shared<AndExpression>(std::make_shared<TerminalExpressin>(cans), std::make_shared<TerminalExpressin>(equipments));
