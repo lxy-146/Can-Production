@@ -16,7 +16,7 @@ Request::Request(int num, string name) {
 	content = name;
 	cout << counter << "." << content << endl;		//创建Request对象的同时打印并标号
 }
-
+int Request::counter = 0;		//初始化请求种类为0
 /*
 *函数：Request::getLevel
 *参数：null
@@ -25,7 +25,6 @@ Request::Request(int num, string name) {
 int Request::getLevel() {
 	return this->level;
 }
-int Request::counter = 0;		//初始化请求种类为0
 
 /*
 *函数：Handler::Handler
@@ -63,6 +62,7 @@ void Handler::handleRequest(int) {};
 *功能：Leader处理员工请求
 */
 void Leader::handleRequest(int level) {
+	cout << "Leader:handleRequest:Leader处理请求"<<endl;
 	if (level < 4) {
 		cout << "请求已由Leader处理！" << endl;
 	}
@@ -80,6 +80,7 @@ void Leader::handleRequest(int level) {
 *功能：Manager处理员工请求
 */
 void Manager::handleRequest(int level) {
+	cout<< "Manager:handleRequest:Manager处理请求" << endl;
 	if (level >= 4 && level < 7) {
 		cout << "请求已由Manager处理！" << endl;
 	}
@@ -98,6 +99,7 @@ void Manager::handleRequest(int level) {
 *功能：Boss处理员工请求
 */
 void Boss::handleRequest(int level) {
+	cout << "Boss:handleRequest:Boss处理请求" << endl;
 	if (level >= 7 && level < 10) {
 		cout << "请求已由Boss处理！" << endl;
 	}

@@ -47,7 +47,7 @@ Originator::Originator(double fund) {
 *功能：设置当前账本状态
 */
 void Originator::setState(string state) {
-	cout << "账本状态更新..." << endl;
+	cout << "Originator:setState:更新账本状态信息" << endl;
 	this->state = state;
 }
 
@@ -66,6 +66,7 @@ string Originator::getState() {
 *功能：打印当前账本信息
 */
 void Originator::printInfo() {
+	cout << "Originator:printInfo:显示账本状态信息" << endl;
 	cout << "账本当前状态: " << this->getState() << "  ";
 	cout << "资金总额: " << this->getFund() << endl;
 }
@@ -76,6 +77,7 @@ void Originator::printInfo() {
 *功能：将账本当前状态信息创建为一条备忘
 */
 Memento* Originator::createMemento() {
+	cout << "Originator:createMemento:创建一条记录保存当前状态信息"<<endl;
 	return new Memento(state, fund);
 }
 
@@ -85,7 +87,7 @@ Memento* Originator::createMemento() {
 *功能：恢复上一次记录的账本状态信息
 */
 void Originator::restoreMemento(Memento* m) {
-	cout << "账本恢复至上一状态" << endl;
+	cout << "Originator:restoreMemento:账本恢复至上一状态" << endl;
 	this->setState(m->getState());
 	this->printInfo();
 }
@@ -122,6 +124,7 @@ void Originator::setFund(int operation, double num) {
 *功能：向备忘录中增加一条记录
 */
 void Caretaker::addMemento(Memento* m) {
+	cout << "Caretaker:addMemento:添加记录到备忘录中"<<endl;
 	mementos.push_back(m);
 }
 
@@ -151,6 +154,7 @@ Accountant::Accountant(Originator* org) {
 *功能：代理查询账本当前状态信息
 */
 void Accountant::printInfo() {
+	cout << "Accountant:printInfo:调用代理对象的printInfo函数" << endl;
 	preRequest();
 	originator->printInfo();
 	postRequest();

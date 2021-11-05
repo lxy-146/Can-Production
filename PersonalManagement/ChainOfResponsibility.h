@@ -9,10 +9,10 @@ class Request {
 public:
 	Request(int num, string name);
 	int getLevel();
+	static int counter;				//用于给请求类型标号（在打印请求选项时中用到）
 private:
 	int level;						//请求的等级
 	string content;					//请求内容
-	static int counter;				//用于给请求类型标号（在打印请求选项时中用到）
 };
 
 

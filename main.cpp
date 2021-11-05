@@ -447,6 +447,7 @@ void personnelmanagement() {
 	int num = 1;
 	while (cin >> num) {
 		if (num == 0) {
+			request1->counter = 0;
 			break;
 		}
 		else if (num > 0 && num < 6) {
