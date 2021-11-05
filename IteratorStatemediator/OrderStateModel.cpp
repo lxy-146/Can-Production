@@ -11,6 +11,7 @@
    功能：计算订单执行所需要的时间,每个罐头的数量获取通过罐头仓库单例实体的函数得到
 */
 int Order2::SumDays() {
+	cout << "classname:" << "Order2" << "method name:" << "SumDays" << "action description:" << "计算订单执行所需要的时间,每个罐头的数量获取通过罐头仓库单例实体的函数得到" << endl;
 	int number = 4;//所需要的罐头的种类数目
 	int* can = new int[number];
 	int* cost = new int[number];

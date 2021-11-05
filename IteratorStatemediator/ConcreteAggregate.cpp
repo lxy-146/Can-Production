@@ -12,6 +12,7 @@
 */
 bool ConcreteAggregate::addOrder(int id,int now_day) //添加新的订单(判断是否为空？)
 {	
+	cout << "classname:" << "ConcreteAggregate" << "method name:" << "addOrder" << "action description:" << "添加新的订单"<<endl;
 	//订单类的实体order
 	Order2* order = new Order2(new CreationState(),now_day);
 	//输入订单的要求来确定订单的实现所需时间
@@ -64,6 +65,7 @@ int ConcreteAggregate::getSize() {
    功能：从头到尾遍历容器输出订单信息
 */
 void ConcreteAggregate::showHtoT() {
+	cout << "classname:" << "ConcreteAggregate" << "method name:" << "showHtoT" << "action description:" << "从头到尾遍历容器输出订单信息" << endl;
 	if (this->getSize() == 0)
 		cout << "当前还没有订单" << endl;
 	else {
@@ -83,6 +85,7 @@ void ConcreteAggregate::showHtoT() {
    功能：从尾到头遍历容器输出订单信息
 */
 void ConcreteAggregate::showTtoH() {
+	cout << "classname:" << "ConcreteAggregate" << "method name:" << "showTtoH" << "action description:" << "从尾到头遍历容器输出订单信息" << endl;
 	if (this->getSize() == 0)
 		cout << "当前还没有订单" << endl;
 	else {
@@ -103,6 +106,7 @@ void ConcreteAggregate::showTtoH() {
    功能：删除指定的订单
 */
 int ConcreteAggregate::deleteOrder() {
+	cout << "classname:" << "ConcreteAggregate" << "method name:" << "deleteOrder" << "action description:" << "删除指定的订单" << endl;
 	cout << "请输入您希望删除的订单的id" << endl;
 	int id;
 	cin >> id;
@@ -141,6 +145,7 @@ void ConcreteAggregate::createIterator(ConcreteIterator* i,int start) {
    功能：获取指定的id的订单
 */
 Order2 ConcreteAggregate::GetOrder(int id) {
+	cout << "classname:" << "ConcreteAggregate" << "method name:" << "GetOrder" << "action description:" << "获取指定的id的订单" << endl;
 	if (this->getSize() == 0)
 	{
 		cout << "当前还没有订单" << endl;

@@ -10,6 +10,7 @@
    功能：获取容器第一个元素
 */
 Order2 ConcreteIterator::first(ConcreteAggregate* list) {
+	cout << "classname:" << "ConcreteIterator" << "method name:" << "first" << "action description:" << "获取订单聚合类第一个元素" << endl;
 	if (this->count != 0)
 	{//获取第一个
 		this->current = this->start;
@@ -27,6 +28,7 @@ Order2 ConcreteIterator::first(ConcreteAggregate* list) {
    功能：获取当前指针指向的下一个元素
 */
 Order2 ConcreteIterator::next(ConcreteAggregate* list) {
+	cout << "classname:" << "ConcreteIterator" << "method name:" << "next" << "action description:" << "获取当前指针指向的下一个元素" << endl;
 	if (this->count == 0)
 		cout << "当前不存在订单" << endl;
 	else {
@@ -48,6 +50,7 @@ Order2 ConcreteIterator::next(ConcreteAggregate* list) {
    功能：获取容器最后一个元素
 */
 Order2 ConcreteIterator::end(ConcreteAggregate* list) {
+	cout << "classname:" << "ConcreteIterator" << "method name:" << "end" << "action description:" << "获取容器最后一个元素" << endl;
 	if (this->count == 0)
 	{
 		cout << "当前不存在订单" << endl;
@@ -66,6 +69,7 @@ Order2 ConcreteIterator::end(ConcreteAggregate* list) {
    功能：获取当前指针指向的元素
 */
 Order2 ConcreteIterator::now(ConcreteAggregate* list) {
+	cout << "classname:" << "ConcreteIterator" << "method name:" << "now" << "action description:" << "获取当前指针指向的元素" << endl;
 	if (this->count == 0)
 		cout << "当前不存在订单" << endl;
 	else {
