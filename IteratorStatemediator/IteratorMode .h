@@ -57,7 +57,7 @@ public:
     }
     void InfoUpgrate(int nowDay);//订单的信息更新
     bool addOrder(int id,int now_day);//添加新的订单
-    int deleteOrder();//删除指定的订单
+    int deleteOrder(int id);//删除指定的订单
     Order2 GetOrder(int id);//获取指定的id的订单
     int getSize();//获取长度
     void createIterator(ConcreteIterator* i,int start);//创建具体迭代器
@@ -65,6 +65,3 @@ private:
     vector<Order2> list;
     //容器存储Order的list来遍历,每次产生一个订单都需要加入到list
 };
-
-
-

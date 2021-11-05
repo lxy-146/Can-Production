@@ -279,7 +279,7 @@ void mediator() {//简单的中介者
 	delete pCol2;
 	delete p;
 }
-//迭代器+状态+单例模式
+//迭代器+状态
 void IteratorStateSingeton() {
 	//创建迭代器和容器
 	int id = 0;
@@ -304,16 +304,15 @@ void IteratorStateSingeton() {
 	cout << "输入8可以查看当前订单的第一个" << endl;
 	cout << "输入9可以查看当前订单的最后一个" << endl;
 	cout << "输入10可以增加一天的日期" << endl;
+	int command[16] = { 1,1,3,4,5,9,8,6,7,2,10,10,10,10,3,0 };
+	int i = 0;
 	while (1) {
 		cout << endl << "今天是第" << nowDay << "天" << endl;
-		int command;
-		cout << "请输入您的指令" << endl;
-		cin >> command;
-		cout << "您输入的指令为:" << command << endl;
-		if (command == 0)
+		cout << "您输入的指令为:" << command[i] << endl;
+		if (command[i] == 0)
 			break;
 		//添加指令
-		else if (command == 1)
+		else if (command[i] == 1)
 		{
 			//添加订单到容器
 			aggregate->addOrder(count, nowDay);
@@ -321,9 +320,9 @@ void IteratorStateSingeton() {
 			//迭代器的参数更新,需要注意起始的订单id变化
 			iterator->SetIterator(id, count);
 		}
-		else if (command == 2) {
+		else if (command[i] == 2) {
 			//删除已经完成的订单
-			if (aggregate->deleteOrder())
+			if (aggregate->deleteOrder(0))
 			{
 				cout << "删除成功" << endl;
 				count--;//删除订单
@@ -335,42 +334,43 @@ void IteratorStateSingeton() {
 			else
 				cout << "输入的id错误,删除失败" << endl;
 		}
-		else if (command == 3) {
+		else if (command[i] == 3) {
 			//顺序遍历
 			aggregate->showHtoT();
 		}
-		else if (command == 4)
+		else if (command[i] == 4)
 		{	//逆序遍历
 			aggregate->showTtoH();
 		}
-		else if (command == 5) {
+		else if (command[i] == 5) {
 			//获取当前的订单的数目
 			cout << "当前的订单数目为:" << endl;
 			cout << aggregate->getSize() << endl;
 		}
-		else if (command == 6) {
+		else if (command[i] == 6) {
 			//查看当前的订单
 			(iterator->now(aggregate).ShowState());
 		}
-		else if (command == 7) {
+		else if (command[i] == 7) {
 			//查看当前订单的下一个
 			iterator->next(aggregate).ShowState();
 		}
-		else if (command == 8) {
+		else if (command[i] == 8) {
 			//查看当前订单的第一个
 			iterator->first(aggregate).ShowState();
 		}
-		else if (command == 9) {
+		else if (command[i] == 9) {
 			//查看当前订单的最后一个
 			iterator->end(aggregate).ShowState();
 		}
-		else if (command == 10) {
+		else if (command[i] == 10) {
 			nowDay++;//日期增加,需要指令输入实现
 		//订单信息需要根据时间变化更新
 			aggregate->InfoUpgrate(nowDay);
 		}
 		else
 			cout << "输入指令错误，请重新输入" << endl;
+		i++;
 	}
 	delete list;
 }

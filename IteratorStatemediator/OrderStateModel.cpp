@@ -16,10 +16,10 @@ int Order2::SumDays() {
 	int* can = new int[number];
 	int* cost = new int[number];
 	int* store = new int[number];
-	cout << "接下来请输入各种罐头的数量(大水果、小水果、大肉、小肉):" << endl;
+	cout << "各种罐头的数量(大水果、小水果、大肉、小肉):" << endl;
 	for (int i = 0; i < number; i++)
 	{
-		cin >> can[i];
+		  can[i]=1;
 	}
 	//每种罐头的生产周期
 	//lf\sf\lm\sm
@@ -30,7 +30,6 @@ int Order2::SumDays() {
 	store[1] = sto->GetSmallFruitCan();
 	store[2] = sto->GetLargeMeatCan();
 	store[3] = sto->GetSmallMeatCan();
-	cout << "信息传输完毕" << endl;
 	//计算得到每种罐头所需要的时间最大值就是订单的生产周期
 	int temp;
 	if (store[0] >= can[0])//存储的罐头数量比需要的多
@@ -42,7 +41,8 @@ int Order2::SumDays() {
 		if (temp < cost[i] * (can[i] - store[i]))//出现了需要时间更多的罐头种类
 			temp = cost[i] * (can[i] - store[i]);
 	for (int i = 0; i < number; i++)
-		cout << can[i] << " " << cost[i] << " " << store[i] << endl;
+		cout << can[i] << " " ;
+	cout << endl;
 	cout << "订单完成所需时间为:" << endl;
 	cout << temp << endl;
 	delete[]can;

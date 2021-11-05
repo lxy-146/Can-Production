@@ -105,11 +105,9 @@ void ConcreteAggregate::showTtoH() {
    参数：null
    功能：删除指定的订单
 */
-int ConcreteAggregate::deleteOrder() {
+int ConcreteAggregate::deleteOrder(int id) {
 	cout << "classname:" << "ConcreteAggregate" << "method name:" << "deleteOrder" << "action description:" << "删除指定的订单" << endl;
 	cout << "请输入您希望删除的订单的id" << endl;
-	int id;
-	cin >> id;
 	//查找订单看是否存在
 	if (this->getSize() == 0)
 	{
