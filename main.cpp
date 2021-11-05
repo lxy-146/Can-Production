@@ -213,10 +213,6 @@ void flyweight() {
 	Kind* fishkind = new FishKind();
 	MiddleCan* middlecan = new MiddleCan(beefkind);
 	middlecan->make();
-	middlecan = new MiddleCan(porkkind);
-	middlecan->make();
-	middlecan = new MiddleCan(fishkind);
-	middlecan->make();
 	Factory* factory = new Factory();
 
 
