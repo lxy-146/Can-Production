@@ -39,6 +39,7 @@ public:
     */
     void setType(string t)
     {
+        cout << "packConcPrototype:setType:change Type" << endl;
         type = t;
     }
     /*
@@ -47,6 +48,7 @@ public:
     */
     void setSize(string s)
     {
+        cout << "packConcPrototype:setSize:change size" << endl;
         size = s;
     }
     /*
@@ -55,7 +57,7 @@ public:
     */
     void display()
     {
-        cout << "A " << size <<" "<< type <<" can is already packed!"<< endl;
+        //cout << "A " << size <<" "<< type <<" can is already packed!"<< endl;
         CanStore* canstore = CanStore::GetInstance();
         if (size == "small" && type == "fruit")
             canstore->AddCan(0, 1, 0, 0);
@@ -73,6 +75,7 @@ public:
     */
     packAbsPrototype* clone() override
     {
+        cout << "packConcPrototype:clone:clone current Prototype object" << endl;
         auto* p =new packConcPrototype(size, type);
         return p;
     }

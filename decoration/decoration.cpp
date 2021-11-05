@@ -6,6 +6,7 @@ void Can_pack::show() {
 }
 //继承罐头包装类，将罐头包装成小罐头的成员函数
 void Small_Can::show() {
+	cout << "Small_Can:show:";
 	can->show();
 	//罐头包装函数
 	pack(can);
@@ -16,6 +17,7 @@ void Small_Can::pack(Can* can) {
 }
 //继承罐头包装类，将罐头包装成大罐头的成员函数
 void Big_Can::show() {
+	cout << "Big_Can:show:";
 	can->show();
 	pack(can);
 }

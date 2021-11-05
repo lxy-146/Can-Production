@@ -176,6 +176,7 @@ void produce() {
 	cucumber->mixed();
 	cout << "=======================================\n" << endl;
 	sleep();
+
 	//原型模式包装罐头
 	cout << "=====Pack cans!=====" << endl;
 	auto* fruitCanPack = new packConcPrototype("big","fruit");
@@ -194,6 +195,7 @@ void produce() {
 	//CanStore::GetInstance()->ShowAll();
 	cout << "=======================================\n" << endl;
 	sleep();
+
 	//空对象模式对订单操作
 	cout <<"=====Finding Buyer=====" << endl;
 	nullobject();
