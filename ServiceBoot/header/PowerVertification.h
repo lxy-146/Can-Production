@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <regex>
+#include <string>
 #include <set>
 
 

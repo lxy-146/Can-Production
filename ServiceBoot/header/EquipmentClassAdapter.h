@@ -29,7 +29,7 @@ public:
     */
     virtual void request()
     {
-        std::cout << "EquipmentClassAdapter is called" << std::endl;
+        std::cout << "EquipmentClassAdapter:request:EquipmentClassAdapter is called" << std::endl;
         specificRequest();
     }
     // ...

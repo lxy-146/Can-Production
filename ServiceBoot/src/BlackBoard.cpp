@@ -46,7 +46,7 @@ void BlackBoard::showBlackBoard()
 	iter = mDatas.begin();
 	while (iter != mDatas.end())
 	{
-		std::cout << iter->first << "  :  " << parseBool(getBool(iter->first)) << std::endl;
+		std::cout << "BlackBoard:showBlackBoard:" << iter->first << "  :  " << parseBool(getBool(iter->first)) << std::endl;
 		iter++;
 	}
 }

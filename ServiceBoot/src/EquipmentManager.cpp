@@ -28,7 +28,8 @@ EquipmentManager* EquipmentManager::getManager(const std::string& type) {
  */
 void EquipmentManager::printCurrentTypes() {
     if (!types.empty()) {
-        std::cout << "Number of instances made = " << types.size() << std::endl;
+        std::cout <<"EquipmentManager:getManager:" << "Number of instances made = " << types.size() << std::endl;
+        std::cout << "EquipmentManager:getManager:" << "print CurrentTypes:" << std::endl;
         for (std::map<std::string, EquipmentManager*>::iterator iter = types.begin(); iter != types.end(); ++iter) {
             std::cout << (*iter).first << std::endl;
         }

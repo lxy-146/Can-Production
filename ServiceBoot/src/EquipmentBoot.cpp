@@ -11,15 +11,15 @@
 void EquipmentBoot::Boot()
 {
 	std::cout << std::endl;
-	std::cout << "=====Power Vertification ON !====" << std::endl;
+	std::cout << "=====Power Vertification ON !====( Interpreter Pattern )" << std::endl;
 	PowerVertificationOn();
-	std::cout << "=====Equipment Manager ON !====" << std::endl;
+	std::cout << "=====Equipment Manager ON !====( Lazy Initialization Pattern )" << std::endl;
 	EquipmentManagerOn();
-	std::cout << "=====Equipment ON !====" << std::endl;
+	std::cout << "=====Equipment ON !====( Facade Pattern )" << std::endl;
 	EquipmentOn();
-	std::cout << "=====Equipment Adapter ON !====" << std::endl;
+	std::cout << "=====Equipment Adapter ON !====( Adapter Pattern )" << std::endl;
 	EquipmentAdapterOn();
-	std::cout << "=====BlackBoard ON !====" << std::endl;
+	std::cout << "=====BlackBoard ON !====( Blackboard Pattern )" << std::endl;
 	BlackBoardOn();
 	std::cout << "=====Equipment START !====" << std::endl;
 	equipment.start();

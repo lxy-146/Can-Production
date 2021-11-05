@@ -63,10 +63,10 @@ void ContextInterpreter::IsFree(const std::string& info)
 {
 	if (smartAndExpr->Interpret(info))
 	{
-		std::cout << info << ",The machine started successfully." << std::endl;
+		std::cout << "ContextInterpreter:isFree:"<< info << " starts successfully."<< std::endl;
 	}
 	else
 	{
-		std::cout << info << ",This machine does not exist! ------------ Cannot be resolved" << std::endl;
+		std::cout << "ContextInterpreter:isFree:" << info << " can't be resolved." << std::endl;
 	}
 }

@@ -37,7 +37,7 @@ public:
     */
     void request()
     {
-        std::cout << "EquipmentObjectAdapter is called" << std::endl;
+        std::cout << "EquipmentObjectAdapter:request:EquipmentObjectAdapter is called" << std::endl;
         equipment->specificRequest();
         // ...
     }

@@ -28,14 +28,14 @@ public:
     * Function:主机子控件启动
     */
     void start() override {
-        std::cout << "Host start" << std::endl;;
+        std::cout << "Host:start:Host start" << std::endl;;
     }
 
     /*
     * Function:主机子控件关闭
     */
     void shutdown() override {
-        std::cout << "Host shutdown" << std::endl;;;
+        std::cout << "Host:shutdown:Host shutdown" << std::endl;;;
     }
 };
 
@@ -46,14 +46,14 @@ public:
     * Function:显示屏子控件启动
     */
     void start() override {
-        std::cout << "LCD Display start" << std::endl;;
+        std::cout << "LCDDisplay:start:LCD Display start" << std::endl;;
     }
 
     /*
     * Function:显示屏子控件关闭
     */
     void shutdown() override {
-        std::cout << "LCD Display shutdonw" << std::endl;;
+        std::cout << "LCDDisplay:shutdown:LCD Display shutdonw" << std::endl;;
     }
 };
 
@@ -64,14 +64,14 @@ public:
     * Function:外部设备子控件启动
     */
     void start() override {
-        std::cout << "Peripheral start" << std::endl;;
+        std::cout << "Peripheral:start:Peripheral start" << std::endl;;
     }
 
     /*
     * Function:外部设备子控件关闭
     */
     void shutdown() override {
-        std::cout << "Peripheral shutdown" << std::endl;;
+        std::cout << "Peripheral:shutdown:Peripheral shutdown" << std::endl;;
     }
 };
 
