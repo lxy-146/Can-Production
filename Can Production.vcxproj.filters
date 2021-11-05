@@ -236,11 +236,11 @@
     <ClCompile Include="command\command.cpp">
       <Filter>command</Filter>
     </ClCompile>
-    <ClCompile Include="flyweightbridge\flyweight2.cpp">
-      <Filter>flyweightbridge</Filter>
-    </ClCompile>
     <ClCompile Include="decoration\decoration.cpp">
       <Filter>decoration</Filter>
+    </ClCompile>
+    <ClCompile Include="Flyweight.cpp">
+      <Filter>flyweightbridge</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

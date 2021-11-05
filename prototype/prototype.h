@@ -4,6 +4,7 @@
 #ifndef PROTOTYPE_H
 #define PROTOTYPE_H
 #include"header.h"
+#include"storehouse.h"
 
 class packAbsPrototype {
     //抽象原型类
@@ -55,6 +56,15 @@ public:
     void display()
     {
         cout << "A " << size <<" "<< type <<" can is already packed!"<< endl;
+        CanStore* canstore = CanStore::GetInstance();
+        if (size == "small" && type == "fruit")
+            canstore->AddCan(0, 1, 0, 0);
+        else if (size == "big" && type == "fruit")
+            canstore->AddCan(1, 0, 0, 0);
+        else if (size == "big" && type == "meat")
+            canstore->AddCan(0, 0, 1, 0);
+        else if (size == "small" && type == "meat")
+            canstore->AddCan(0, 0, 0, 1);
         //展示罐头种类以及大小
     }
     /*

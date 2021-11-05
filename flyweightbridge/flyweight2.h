@@ -23,7 +23,7 @@ class BeefKind :public Kind {
 	virtual void make();
 	virtual void unmake();
 };
-//增加新的尺寸的中型罐头
+//增加新的尺寸：中型罐头
 class MiddleCan :public Package {
 public:
 	MiddleCan(Kind* k) :kind(k) {}

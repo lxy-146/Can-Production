@@ -191,8 +191,8 @@ void produce() {
 	auto* retypedFruitCanPack = fruitCanPack->clone();
 	retypedFruitCanPack->setType("meat");
 	retypedFruitCanPack->display();
+	//CanStore::GetInstance()->ShowAll();
 	cout << "=======================================\n" << endl;
-	//类似地，改变类型后包装罐头
 	sleep();
 	//空对象模式对订单操作
 	cout <<"=====Finding Buyer=====" << endl;
@@ -206,7 +206,7 @@ void produce() {
 		if (i == 0)break;
 	}
 }
-//享元
+//享元+桥梁
 void flyweight() {
 	Kind* beefkind = new BeefKind();
 	Kind* porkkind = new PorkKind();
@@ -215,25 +215,26 @@ void flyweight() {
 	middlecan->make();
 	Factory* factory = new Factory();
 
-
-	for (int i = 0; i < 4; i++) {
+	int j=0;
+	for (int i = 0; i < 6; i++) {
 		Can* f;
-		switch (i) {
+		j = i % 4;
+		switch (j) {
 		case 0:
 			f = factory->GetFlyweights("bigfruit");
-			f->show();
+			//f->show();
 			break;
 		case 1:
 			f = factory->GetFlyweights("smallfruit");
-			f->show();
+			//f->show();
 			break;
 		case 2:
 			f = factory->GetFlyweights("bigmeat");
-			f->show();
+			//f->show();
 			break;
 		case 3:
 			f = factory->GetFlyweights("smallmeat");
-			f->show();
+			//f->show();
 			break;
 		}
 

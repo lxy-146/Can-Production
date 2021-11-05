@@ -100,3 +100,7 @@ void CanStore::DecreaseCan(int largefruitcan, int smallfruitcan, int largemeatca
 	this->smallmeatcan -= smallmeatcan;
 }
 
+void CanStore::ShowAll() {
+	cout << "largefruitcan:" << this->largefruitcan << "  smallfruitcan:" << this->smallfruitcan <<
+		"   largemeatcan:" << this->largemeatcan << "   smallmeatcan:" << this->smallmeatcan << endl;
+}

@@ -44,6 +44,7 @@ public:
 	int GetSmallMeatCan();
 	void AddCan(int, int, int, int);
 	void DecreaseCan(int, int, int, int);
+	void ShowAll();
 private:
 	CanStore() { largefruitcan = smallfruitcan = largemeatcan = smallmeatcan = 0; }
 	int largefruitcan;

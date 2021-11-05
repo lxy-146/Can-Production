@@ -182,7 +182,7 @@
     <ClCompile Include="command\command.cpp" />
     <ClCompile Include="decoration\decoration.cpp" />
     <ClCompile Include="FinanceManagement\Finance.cpp" />
-    <ClCompile Include="flyweightbridge\flyweight2.cpp" />
+    <ClCompile Include="Flyweight.cpp" />
     <ClCompile Include="IteratorStatemediator\ConcreteAggregate.cpp" />
     <ClCompile Include="IteratorStatemediator\ConcreteIterator.cpp" />
     <ClCompile Include="IteratorStatemediator\OrderStateModel.cpp" />

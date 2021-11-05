@@ -72,6 +72,7 @@ void MiddleCan::unmake() {
 Can* Factory::GetFlyweights(string key) {
 	if (flyweights.count(key) == 0)
 	{
+		cout << "Factory:GetFlyweights:将新的类型加入到工厂中" << endl;
 		Can_pack* c;
 		if (key == "bigfruit") c = new Big_Can(new FruitCan());
 		else if (key == "smallfruit") c = new Small_Can(new FruitCan());
@@ -79,6 +80,8 @@ Can* Factory::GetFlyweights(string key) {
 		else if (key == "smallmeat")c = new Small_Can(new MeatCan());
 		flyweights.insert(make_pair(key, c));
 	}
+	else
+		cout << "Factory:GetFlyweights:该类型已存在，使用已有类型" << endl;
 	return (Can*)flyweights[key];
 }
 
