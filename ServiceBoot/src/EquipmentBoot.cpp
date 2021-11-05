@@ -132,8 +132,8 @@ void EquipmentBoot::BlackBoardOn()
 	BlackBoard blockBoard;
 	blockBoard.setValue("NO.1 Meat Productor needs to be repaired", true);
 	blockBoard.setValue("NO.2 Meat Productor needs to be repaired", false);
-	blockBoard.setValue("NO.1 Vegetable Productor needs to be repaired", false);
-	blockBoard.setValue("NO.2 Vegetable Productor needs to be repaired", true);
+	blockBoard.setValue("NO.1 Fruit Productor needs to be repaired", false);
+	blockBoard.setValue("NO.2 Fruit Productor needs to be repaired", true);
 
 	blockBoard.showBlackBoard();
 	std::cout << std::endl;
