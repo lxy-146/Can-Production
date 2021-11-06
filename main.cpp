@@ -44,7 +44,7 @@ void showhome() {
 	cout << "      ******       ******" << endl;
 	cout << "    **********   **********" << endl;
 	cout << "  ************* *************" << endl;
-	cout << " *****************************              1.can-produce  "<< endl;
+	cout << " *****************************              1.can production  "<< endl;
 	cout << " *****************************              2.order management             " << endl;
 	cout << " *****************************              3.finance management "<< endl;
 	cout << "  ***************************               4.person management" << endl;
@@ -112,7 +112,7 @@ void produce() {
 	ordersubject->SetOrder(10, 100);//创建一个订单：购买10个水果，100个肉
 	//ordersubject->SetOrder(100, 10);
 	cout <<"=======================================\n" << endl;
-	sleep();
+	//sleep();
 
 
 	//抽象工厂模式、工厂模式、命令模式
@@ -128,13 +128,13 @@ void produce() {
 	broker.placeorder();//执行所有命令
 	broker.clear();//清除所有命令
 	cout << "=======================================\n" << endl;
-	sleep();
+	//sleep();
 
 
 	//外观模式、解释器模式
 	EquipmentBoot eb;
 	eb.Boot();
-	sleep();
+	//sleep();
 	//装饰者模式
 	cout << endl;
 	cout << "=====Assemble cans!=====" << endl;
@@ -145,12 +145,12 @@ void produce() {
 	small_fruit_can.show();
 	big_meat_can.show();
 	cout << "=======================================\n" << endl;
-	sleep();
+	//sleep();
 
 	cout << "=====Produce more cans!=====" << endl;
 	flyweight();
 	cout << "=======================================\n" << endl;
-	sleep();
+	//sleep();
 	//惰性工厂模式，生产各种类型的罐头
 	//双胞胎（twin）模式，生产组合类型罐头
 	cout << "=====Produce combined cans!=====" << endl;
@@ -175,7 +175,7 @@ void produce() {
 	carrot_chicken->mixed();
 	cucumber->mixed();
 	cout << "=======================================\n" << endl;
-	sleep();
+	//sleep();
 
 	//原型模式包装罐头
 	cout << "=====Pack cans!=====" << endl;
@@ -194,13 +194,13 @@ void produce() {
 	retypedFruitCanPack->display();
 	//CanStore::GetInstance()->ShowAll();
 	cout << "=======================================\n" << endl;
-	sleep();
+	//sleep();
 
 	//空对象模式对订单操作
 	cout <<"=====Finding Buyer=====" << endl;
 	nullobject();
 	cout << "=======================================\n" << endl;
-	sleep();
+	//sleep();
 	int i=-1;
 	while (true) {
 		cout << "input 0 to exit:" << endl;
